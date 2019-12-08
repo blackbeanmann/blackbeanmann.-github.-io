@@ -289,83 +289,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%22set%20and%20dictionary%22/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LX">
-      <meta itemprop="description" content="A student">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BEAN HOUSE">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/22/%22set%20and%20dictionary%22/" class="post-title-link" itemprop="url">set and dictionary</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-08 22:48:59" itemprop="dateModified" datetime="2019-12-08T22:48:59+08:00">2019-12-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">set1=&#123;6,3,4,2,7&#125;</span><br><span class="line">print(set1)</span><br><span class="line">print(len(set1))</span><br><span class="line">set2 = set(range(1, 10)) #use constructor</span><br><span class="line">set3 = set((1, 2, 3, 3, 2, 1))#use constuvtor</span><br><span class="line">print(set2,set3)</span><br><span class="line">set4 = &#123;num for num in range(1, 10) if num % 3 == 0 or num % 5 == 0&#125;</span><br><span class="line">print(set4)</span><br><span class="line">set1.add(4)</span><br><span class="line">set1.add(5)</span><br><span class="line">set1.add(5)     #no problem, clever python ! </span><br><span class="line">set2.update([11, 12])</span><br><span class="line">print(set2)</span><br><span class="line">set2.discard(5)</span><br><span class="line">print(set2)</span><br><span class="line">set2.discard(5)  #no problem</span><br><span class="line">print(set2)</span><br><span class="line">set2.pop()          #pop from head</span><br><span class="line">print(set2)</span><br><span class="line">print(&quot;.................................&quot;)</span><br><span class="line"></span><br><span class="line"># 集合的交集、并集、差集、对称差运算</span><br><span class="line">print(set1 &amp; set2)</span><br><span class="line"># print(set1.intersection(set2))</span><br><span class="line">print(set1 | set2)</span><br><span class="line"># print(set1.union(set2))</span><br><span class="line">print(set1 - set2)</span><br><span class="line"># print(set1.difference(set2))</span><br><span class="line">print(set1 ^ set2)#(subtravting)</span><br><span class="line"># print(set1.symmetric_difference(set2))</span><br><span class="line"># 判断子集和超集</span><br><span class="line">print(set2 &lt;= set1)</span><br><span class="line"># print(set2.issubset(set1))</span><br><span class="line">print(set3 &lt;= set1)</span><br><span class="line"># print(set3.issubset(set1))</span><br><span class="line">print(set1 &gt;= set2)</span><br><span class="line"># print(set1.issuperset(set2))</span><br><span class="line">print(set1 &gt;= set3)</span><br><span class="line"># print(set1.issuperset(set3))</span><br><span class="line">#print(&#123;1, 2&#125; &gt; &#123;1&#125;)  # True</span><br></pre></td></tr></table></figure>
-
-<h2 id="dictionary"><a href="#dictionary" class="headerlink" title="dictionary"></a>dictionary</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"># 创建字典的字面量语法</span><br><span class="line">scores = &#123;&apos;骆昊&apos;: 95, &apos;白元芳&apos;: 78, &apos;狄仁杰&apos;: 82&#125;</span><br><span class="line">print(scores)</span><br><span class="line"># 创建字典的构造器语法</span><br><span class="line">items1 = dict(one=1, two=2, three=3, four=4)</span><br><span class="line"># 通过zip函数将两个序列压成字典</span><br><span class="line">items2 = dict(zip([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;], &apos;123&apos;))</span><br><span class="line"># 创建字典的推导式语法</span><br><span class="line">items3 = &#123;num: num ** 2 for num in range(1, 10)&#125;</span><br><span class="line">print(items1, items2, items3)</span><br><span class="line"># 通过键可以获取字典中对应的值</span><br><span class="line">print(scores[&apos;骆昊&apos;])</span><br><span class="line">print(scores[&apos;狄仁杰&apos;])</span><br><span class="line"># 对字典中所有键值对进行遍历</span><br><span class="line">for key in scores:</span><br><span class="line">    print(f&apos;&#123;key&#125;: &#123;scores[key]&#125;&apos;)</span><br><span class="line"># 更新字典中的元素</span><br><span class="line">scores[&apos;白元芳&apos;] = 65</span><br><span class="line">scores[&apos;诸葛王朗&apos;] = 71  #python would add it  </span><br><span class="line">automatically</span><br><span class="line">scores.update(冷面=67, 方启鹤=85)</span><br><span class="line">print(scores)</span><br><span class="line">if &apos;武则天&apos; in scores:</span><br><span class="line">    print(scores[&apos;武则天&apos;])</span><br><span class="line">print(scores.get(&apos;武则天&apos;))</span><br><span class="line"># get方法也是通过键获取对应的值但是可以设置默认值</span><br><span class="line">print(scores.get(&apos;武则天&apos;, 60))</span><br><span class="line"># 删除字典中的元素</span><br><span class="line">print(scores.popitem())</span><br><span class="line">print(scores.popitem())</span><br><span class="line">print(scores.pop(&apos;骆昊&apos;, 100))</span><br><span class="line"># 清空字典</span><br><span class="line">scores.clear()</span><br><span class="line">print(scores)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%22pystrings%22/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -428,6 +351,83 @@
 
 <h2 id="3-output"><a href="#3-output" class="headerlink" title="3 output"></a>3 output</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">我们之前讲过，可以用下面的方式来格式化输出字符串。</span><br><span class="line"></span><br><span class="line">a, b = 5, 10</span><br><span class="line">print(&apos;%d * %d = %d&apos; % (a, b, a * b))</span><br><span class="line">当然，我们也可以用字符串提供的方法来完成字符串的格式，</span><br><span class="line">代码如下所示。</span><br><span class="line"></span><br><span class="line">a, b = 5, 10</span><br><span class="line">print(&apos;&#123;0&#125; * &#123;1&#125; = &#123;2&#125;&apos;.format(a, b, a * b))</span><br><span class="line"></span><br><span class="line">Python 3.6以后，格式化字符串还有更为简洁的书写方式，</span><br><span class="line">就是在字符串前加上字母f，</span><br><span class="line">我们可以使用下面的语法糖来简化上面的代码。</span><br><span class="line"></span><br><span class="line">a, b = 5, 10</span><br><span class="line">print(f&apos;&#123;a&#125; * &#123;b&#125; = &#123;a * b&#125;&apos;)</span><br></pre></td></tr></table></figure>
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%22set%20and%20dictionary%22/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LX">
+      <meta itemprop="description" content="A student">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BEAN HOUSE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/22/%22set%20and%20dictionary%22/" class="post-title-link" itemprop="url">set and dictionary</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-08 22:48:59" itemprop="dateModified" datetime="2019-12-08T22:48:59+08:00">2019-12-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">set1=&#123;6,3,4,2,7&#125;</span><br><span class="line">print(set1)</span><br><span class="line">print(len(set1))</span><br><span class="line">set2 = set(range(1, 10)) #use constructor</span><br><span class="line">set3 = set((1, 2, 3, 3, 2, 1))#use constuvtor</span><br><span class="line">print(set2,set3)</span><br><span class="line">set4 = &#123;num for num in range(1, 10) if num % 3 == 0 or num % 5 == 0&#125;</span><br><span class="line">print(set4)</span><br><span class="line">set1.add(4)</span><br><span class="line">set1.add(5)</span><br><span class="line">set1.add(5)     #no problem, clever python ! </span><br><span class="line">set2.update([11, 12])</span><br><span class="line">print(set2)</span><br><span class="line">set2.discard(5)</span><br><span class="line">print(set2)</span><br><span class="line">set2.discard(5)  #no problem</span><br><span class="line">print(set2)</span><br><span class="line">set2.pop()          #pop from head</span><br><span class="line">print(set2)</span><br><span class="line">print(&quot;.................................&quot;)</span><br><span class="line"></span><br><span class="line"># 集合的交集、并集、差集、对称差运算</span><br><span class="line">print(set1 &amp; set2)</span><br><span class="line"># print(set1.intersection(set2))</span><br><span class="line">print(set1 | set2)</span><br><span class="line"># print(set1.union(set2))</span><br><span class="line">print(set1 - set2)</span><br><span class="line"># print(set1.difference(set2))</span><br><span class="line">print(set1 ^ set2)#(subtravting)</span><br><span class="line"># print(set1.symmetric_difference(set2))</span><br><span class="line"># 判断子集和超集</span><br><span class="line">print(set2 &lt;= set1)</span><br><span class="line"># print(set2.issubset(set1))</span><br><span class="line">print(set3 &lt;= set1)</span><br><span class="line"># print(set3.issubset(set1))</span><br><span class="line">print(set1 &gt;= set2)</span><br><span class="line"># print(set1.issuperset(set2))</span><br><span class="line">print(set1 &gt;= set3)</span><br><span class="line"># print(set1.issuperset(set3))</span><br><span class="line">#print(&#123;1, 2&#125; &gt; &#123;1&#125;)  # True</span><br></pre></td></tr></table></figure>
+
+<h2 id="dictionary"><a href="#dictionary" class="headerlink" title="dictionary"></a>dictionary</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"># 创建字典的字面量语法</span><br><span class="line">scores = &#123;&apos;骆昊&apos;: 95, &apos;白元芳&apos;: 78, &apos;狄仁杰&apos;: 82&#125;</span><br><span class="line">print(scores)</span><br><span class="line"># 创建字典的构造器语法</span><br><span class="line">items1 = dict(one=1, two=2, three=3, four=4)</span><br><span class="line"># 通过zip函数将两个序列压成字典</span><br><span class="line">items2 = dict(zip([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;], &apos;123&apos;))</span><br><span class="line"># 创建字典的推导式语法</span><br><span class="line">items3 = &#123;num: num ** 2 for num in range(1, 10)&#125;</span><br><span class="line">print(items1, items2, items3)</span><br><span class="line"># 通过键可以获取字典中对应的值</span><br><span class="line">print(scores[&apos;骆昊&apos;])</span><br><span class="line">print(scores[&apos;狄仁杰&apos;])</span><br><span class="line"># 对字典中所有键值对进行遍历</span><br><span class="line">for key in scores:</span><br><span class="line">    print(f&apos;&#123;key&#125;: &#123;scores[key]&#125;&apos;)</span><br><span class="line"># 更新字典中的元素</span><br><span class="line">scores[&apos;白元芳&apos;] = 65</span><br><span class="line">scores[&apos;诸葛王朗&apos;] = 71  #python would add it  </span><br><span class="line">automatically</span><br><span class="line">scores.update(冷面=67, 方启鹤=85)</span><br><span class="line">print(scores)</span><br><span class="line">if &apos;武则天&apos; in scores:</span><br><span class="line">    print(scores[&apos;武则天&apos;])</span><br><span class="line">print(scores.get(&apos;武则天&apos;))</span><br><span class="line"># get方法也是通过键获取对应的值但是可以设置默认值</span><br><span class="line">print(scores.get(&apos;武则天&apos;, 60))</span><br><span class="line"># 删除字典中的元素</span><br><span class="line">print(scores.popitem())</span><br><span class="line">print(scores.popitem())</span><br><span class="line">print(scores.pop(&apos;骆昊&apos;, 100))</span><br><span class="line"># 清空字典</span><br><span class="line">scores.clear()</span><br><span class="line">print(scores)</span><br></pre></td></tr></table></figure>
       
     </div>
 
