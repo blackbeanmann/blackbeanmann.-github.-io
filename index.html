@@ -235,7 +235,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-08 11:11:25" itemprop="dateModified" datetime="2019-12-08T11:11:25+08:00">2019-12-08</time>
+                <time title="Modified: 2019-12-09 16:14:51" itemprop="dateModified" datetime="2019-12-09T16:14:51+08:00">2019-12-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -260,17 +260,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="python-eggies"><a href="#python-eggies" class="headerlink" title="python eggies"></a>python eggies</h1><h2 id="1-overload-in-python"><a href="#1-overload-in-python" class="headerlink" title="1 overload in python"></a>1 overload in python</h2><p>Actually, there is no function overload in python,but we can do it in a different way</p>
+          <h1 id="python-eggies"><a href="#python-eggies" class="headerlink" title="python eggies"></a>python eggies</h1><h2 id="overload-in-python"><a href="#overload-in-python" class="headerlink" title="overload in python"></a>overload in python</h2><p>Actually, there is no function overload in python,but we can do it in a different way</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">roll_dice</span><span class="params">(n=<span class="number">2</span>)</span>:</span></span><br><span class="line">    total=<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(n):	 <span class="comment">#change range() to unary</span></span><br><span class="line">        total+=randint(<span class="number">1</span>,<span class="number">6</span>) <span class="comment">#use _ as default</span></span><br><span class="line">    <span class="keyword">return</span> total		<span class="comment">#loop n times</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(a=<span class="number">0</span>,b=<span class="number">0</span>,c=<span class="number">0</span>)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> a+b+c</span><br><span class="line"></span><br><span class="line">print(roll_dice())    <span class="comment">#default</span></span><br><span class="line">print(roll_dice(<span class="number">3</span>))</span><br><span class="line">print(add())</span><br><span class="line">print(add(<span class="number">1</span>))			<span class="comment">#a</span></span><br><span class="line">print(add(<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line">print(add(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>))	<span class="comment">#a b c</span></span><br><span class="line">print(add(c=<span class="number">50</span>,a=<span class="number">100</span>,b=<span class="number">200</span>))	<span class="comment">#change the order</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="2-use-module"><a href="#2-use-module" class="headerlink" title="2 use module "></a>2 use module </h2><p>For there is no function overload，it is necessary to use the module to extinct functions.<br><font color=red>module == .py</font></p>
+<h2 id="use-module"><a href="#use-module" class="headerlink" title="use module "></a>use module </h2><p>For there is no function overload，it is necessary to use the module to extinct functions.<br><font color="red">module == .py</font></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'hello, world!'</span>)    <span class="comment">#covered</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'goodbye, world!'</span>)</span><br><span class="line">   </span><br><span class="line">foo();</span><br><span class="line">output: goodbye world</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">module1.py</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'hello, world!'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">module2.py</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'goodbye, world!'</span>)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">test.py</span><br><span class="line"><span class="keyword">from</span> module1 <span class="keyword">import</span> foo</span><br><span class="line"><span class="comment"># hello, world!</span></span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> module2 <span class="keyword">import</span> foo</span><br><span class="line"><span class="comment"># goodbye, world!</span></span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line"><span class="keyword">or</span> test1.py</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> module1 <span class="keyword">as</span> m1</span><br><span class="line"><span class="keyword">import</span> module2 <span class="keyword">as</span> m2</span><br><span class="line"></span><br><span class="line">m1.foo()</span><br><span class="line">m2.foo()</span><br></pre></td></tr></table></figure>
-<h2 id="3-avoid-too-many-mains"><a href="#3-avoid-too-many-mains" class="headerlink" title="3 avoid too many mains"></a>3 avoid too many mains</h2><p>The python interpreter(解释器) would run all the codes in modules.<br>We can only run the function in modules by using ‘ __main__‘</p>
+<h2 id="avoid-too-many-mains"><a href="#avoid-too-many-mains" class="headerlink" title="avoid too many mains"></a>avoid too many mains</h2><p>The python interpreter(解释器) would run all the codes in modules.<br>We can only run the function in modules by using ‘ __main__‘</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    print(&apos;call foo()&apos;)</span><br><span class="line">    foo()</span><br></pre></td></tr></table></figure>
 
-<h2 id="4-function-in-function"><a href="#4-function-in-function" class="headerlink" title="4 function in function"></a>4 function in function</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">def foo():</span><br><span class="line">    b = &apos;hello&apos;</span><br><span class="line"></span><br><span class="line">    # we can define function in function </span><br><span class="line">    def bar():</span><br><span class="line">        c = True</span><br><span class="line">        print(a)</span><br><span class="line">        print(b)</span><br><span class="line">        print(c)</span><br><span class="line"></span><br><span class="line">    bar()</span><br><span class="line">    # print(c)  # NameError: name &apos;c&apos; is not defined</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    a = 100</span><br><span class="line">    # print(b)  # NameError: name &apos;b&apos; is not defined</span><br><span class="line">    foo()</span><br></pre></td></tr></table></figure>
+<h2 id="function-in-function"><a href="#function-in-function" class="headerlink" title="function in function"></a>function in function</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">def foo():</span><br><span class="line">    b = &apos;hello&apos;</span><br><span class="line"></span><br><span class="line">    # we can define function in function </span><br><span class="line">    def bar():</span><br><span class="line">        c = True</span><br><span class="line">        print(a)</span><br><span class="line">        print(b)</span><br><span class="line">        print(c)</span><br><span class="line"></span><br><span class="line">    bar()</span><br><span class="line">    # print(c)  # NameError: name &apos;c&apos; is not defined</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    a = 100</span><br><span class="line">    # print(b)  # NameError: name &apos;b&apos; is not defined</span><br><span class="line">    foo()</span><br></pre></td></tr></table></figure>
+
+<h2 id="2d-array-in-python"><a href="#2d-array-in-python" class="headerlink" title="2d array in python"></a>2d array in python</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">row=4</span><br><span class="line">column=3</span><br><span class="line">g = [[i+j for i in range(column)] for j in range(row)]</span><br><span class="line">print(g)</span><br></pre></td></tr></table></figure>
+
+<p>from:<a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md</a></p>
+
       
     </div>
 
@@ -320,7 +325,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-08 22:05:38" itemprop="dateModified" datetime="2019-12-08T22:05:38+08:00">2019-12-08</time>
+                <time title="Modified: 2019-12-08 23:12:55" itemprop="dateModified" datetime="2019-12-08T23:12:55+08:00">2019-12-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -350,6 +355,8 @@
 <h2 id="2-functions"><a href="#2-functions" class="headerlink" title="2 functions"></a>2 functions</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">str1 = &apos;hello, world!&apos;</span><br><span class="line"># 通过内置函数len计算字符串的长度</span><br><span class="line">print(len(str1)) # 13</span><br><span class="line"># 获得字符串首字母大写的拷贝</span><br><span class="line">print(str1.capitalize()) # Hello, world!</span><br><span class="line"># 获得字符串每个单词首字母大写的拷贝</span><br><span class="line">print(str1.title()) # Hello, World!</span><br><span class="line"># 获得字符串变大写后的拷贝</span><br><span class="line">print(str1.upper()) # HELLO, WORLD!</span><br><span class="line"># 从字符串中查找子串所在位置</span><br><span class="line">print(str1.find(&apos;or&apos;)) # 8</span><br><span class="line">print(str1.find(&apos;shit&apos;)) # -1</span><br><span class="line"># 与find类似但找不到子串时会引发异常</span><br><span class="line"># print(str1.index(&apos;or&apos;))</span><br><span class="line"># print(str1.index(&apos;shit&apos;))</span><br><span class="line"># 检查字符串是否以指定的字符串开头</span><br><span class="line">print(str1.startswith(&apos;He&apos;)) # False</span><br><span class="line">print(str1.startswith(&apos;hel&apos;)) # True</span><br><span class="line"># 检查字符串是否以指定的字符串结尾</span><br><span class="line">print(str1.endswith(&apos;!&apos;)) # True</span><br><span class="line"># 将字符串以指定的宽度居中并在两侧填充指定的字符</span><br><span class="line">print(str1.center(50, &apos;*&apos;))</span><br><span class="line"># 将字符串以指定的宽度靠右放置左侧填充指定的字符</span><br><span class="line">print(str1.rjust(50, &apos; &apos;))</span><br><span class="line">str2 = &apos;abc123456&apos;</span><br><span class="line"># 检查字符串是否由数字构成</span><br><span class="line">print(str2.isdigit())  # False</span><br><span class="line"># 检查字符串是否以字母构成</span><br><span class="line">print(str2.isalpha())  # False</span><br><span class="line"># 检查字符串是否以数字和字母构成</span><br><span class="line">print(str2.isalnum())  # True</span><br><span class="line">str3 = &apos;  jackfrued@126.com &apos;</span><br><span class="line">print(str3)</span><br><span class="line"># 获得字符串修剪左右两侧空格之后的拷贝</span><br><span class="line">print(str3.strip())</span><br></pre></td></tr></table></figure>
 
 <h2 id="3-output"><a href="#3-output" class="headerlink" title="3 output"></a>3 output</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">我们之前讲过，可以用下面的方式来格式化输出字符串。</span><br><span class="line"></span><br><span class="line">a, b = 5, 10</span><br><span class="line">print(&apos;%d * %d = %d&apos; % (a, b, a * b))</span><br><span class="line">当然，我们也可以用字符串提供的方法来完成字符串的格式，</span><br><span class="line">代码如下所示。</span><br><span class="line"></span><br><span class="line">a, b = 5, 10</span><br><span class="line">print(&apos;&#123;0&#125; * &#123;1&#125; = &#123;2&#125;&apos;.format(a, b, a * b))</span><br><span class="line"></span><br><span class="line">Python 3.6以后，格式化字符串还有更为简洁的书写方式，</span><br><span class="line">就是在字符串前加上字母f，</span><br><span class="line">我们可以使用下面的语法糖来简化上面的代码。</span><br><span class="line"></span><br><span class="line">a, b = 5, 10</span><br><span class="line">print(f&apos;&#123;a&#125; * &#123;b&#125; = &#123;a * b&#125;&apos;)</span><br></pre></td></tr></table></figure>
+
+<p>from:<a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md</a></p>
 
       
     </div>
@@ -400,7 +407,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-08 22:48:59" itemprop="dateModified" datetime="2019-12-08T22:48:59+08:00">2019-12-08</time>
+                <time title="Modified: 2019-12-08 23:13:25" itemprop="dateModified" datetime="2019-12-08T23:13:25+08:00">2019-12-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -428,6 +435,9 @@
           <h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">set1=&#123;6,3,4,2,7&#125;</span><br><span class="line">print(set1)</span><br><span class="line">print(len(set1))</span><br><span class="line">set2 = set(range(1, 10)) #use constructor</span><br><span class="line">set3 = set((1, 2, 3, 3, 2, 1))#use constuvtor</span><br><span class="line">print(set2,set3)</span><br><span class="line">set4 = &#123;num for num in range(1, 10) if num % 3 == 0 or num % 5 == 0&#125;</span><br><span class="line">print(set4)</span><br><span class="line">set1.add(4)</span><br><span class="line">set1.add(5)</span><br><span class="line">set1.add(5)     #no problem, clever python ! </span><br><span class="line">set2.update([11, 12])</span><br><span class="line">print(set2)</span><br><span class="line">set2.discard(5)</span><br><span class="line">print(set2)</span><br><span class="line">set2.discard(5)  #no problem</span><br><span class="line">print(set2)</span><br><span class="line">set2.pop()          #pop from head</span><br><span class="line">print(set2)</span><br><span class="line">print(&quot;.................................&quot;)</span><br><span class="line"></span><br><span class="line"># 集合的交集、并集、差集、对称差运算</span><br><span class="line">print(set1 &amp; set2)</span><br><span class="line"># print(set1.intersection(set2))</span><br><span class="line">print(set1 | set2)</span><br><span class="line"># print(set1.union(set2))</span><br><span class="line">print(set1 - set2)</span><br><span class="line"># print(set1.difference(set2))</span><br><span class="line">print(set1 ^ set2)#(subtravting)</span><br><span class="line"># print(set1.symmetric_difference(set2))</span><br><span class="line"># 判断子集和超集</span><br><span class="line">print(set2 &lt;= set1)</span><br><span class="line"># print(set2.issubset(set1))</span><br><span class="line">print(set3 &lt;= set1)</span><br><span class="line"># print(set3.issubset(set1))</span><br><span class="line">print(set1 &gt;= set2)</span><br><span class="line"># print(set1.issuperset(set2))</span><br><span class="line">print(set1 &gt;= set3)</span><br><span class="line"># print(set1.issuperset(set3))</span><br><span class="line">#print(&#123;1, 2&#125; &gt; &#123;1&#125;)  # True</span><br></pre></td></tr></table></figure>
 
 <h2 id="dictionary"><a href="#dictionary" class="headerlink" title="dictionary"></a>dictionary</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"># 创建字典的字面量语法</span><br><span class="line">scores = &#123;&apos;骆昊&apos;: 95, &apos;白元芳&apos;: 78, &apos;狄仁杰&apos;: 82&#125;</span><br><span class="line">print(scores)</span><br><span class="line"># 创建字典的构造器语法</span><br><span class="line">items1 = dict(one=1, two=2, three=3, four=4)</span><br><span class="line"># 通过zip函数将两个序列压成字典</span><br><span class="line">items2 = dict(zip([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;], &apos;123&apos;))</span><br><span class="line"># 创建字典的推导式语法</span><br><span class="line">items3 = &#123;num: num ** 2 for num in range(1, 10)&#125;</span><br><span class="line">print(items1, items2, items3)</span><br><span class="line"># 通过键可以获取字典中对应的值</span><br><span class="line">print(scores[&apos;骆昊&apos;])</span><br><span class="line">print(scores[&apos;狄仁杰&apos;])</span><br><span class="line"># 对字典中所有键值对进行遍历</span><br><span class="line">for key in scores:</span><br><span class="line">    print(f&apos;&#123;key&#125;: &#123;scores[key]&#125;&apos;)</span><br><span class="line"># 更新字典中的元素</span><br><span class="line">scores[&apos;白元芳&apos;] = 65</span><br><span class="line">scores[&apos;诸葛王朗&apos;] = 71  #python would add it  </span><br><span class="line">automatically</span><br><span class="line">scores.update(冷面=67, 方启鹤=85)</span><br><span class="line">print(scores)</span><br><span class="line">if &apos;武则天&apos; in scores:</span><br><span class="line">    print(scores[&apos;武则天&apos;])</span><br><span class="line">print(scores.get(&apos;武则天&apos;))</span><br><span class="line"># get方法也是通过键获取对应的值但是可以设置默认值</span><br><span class="line">print(scores.get(&apos;武则天&apos;, 60))</span><br><span class="line"># 删除字典中的元素</span><br><span class="line">print(scores.popitem())</span><br><span class="line">print(scores.popitem())</span><br><span class="line">print(scores.pop(&apos;骆昊&apos;, 100))</span><br><span class="line"># 清空字典</span><br><span class="line">scores.clear()</span><br><span class="line">print(scores)</span><br></pre></td></tr></table></figure>
+
+<p>from:<a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md</a></p>
+
       
     </div>
 
@@ -477,7 +487,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-08 22:06:38" itemprop="dateModified" datetime="2019-12-08T22:06:38+08:00">2019-12-08</time>
+                <time title="Modified: 2019-12-08 23:13:10" itemprop="dateModified" datetime="2019-12-08T23:13:10+08:00">2019-12-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -509,6 +519,9 @@
 
 <h2 id="4-generative-formula-amp-generator"><a href="#4-generative-formula-amp-generator" class="headerlink" title="4 generative formula &amp; generator"></a>4 generative formula &amp; generator</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">f = [x for x in range(1, 10)]</span><br><span class="line">print(f)</span><br><span class="line">f = [x + y for x in &apos;ABCDE&apos; for y in &apos;1234567&apos;]</span><br><span class="line">print(f)</span><br><span class="line"># 用列表的生成表达式语法创建列表容器</span><br><span class="line"># 用这种语法创建列表之后元素已经准备就绪所以需要耗费较多的内存空间</span><br><span class="line">f = [x ** 2 for x in range(1, 10)]</span><br><span class="line">print(sys.getsizeof(f))  # 查看对象占用内存的字节数 192</span><br><span class="line">print(f)</span><br><span class="line"># 请注意下面的代码创建的不是一个列表而是一个生成器对象</span><br><span class="line"># 通过生成器可以获取到数据但它不占用额外的空间存储数据    (额外是指比正常多一点)</span><br><span class="line"># 每次需要数据的时候就通过内部的运算得到数据(需要花费额外的时间)</span><br><span class="line">f = (x ** 2 for x in range(1, 10))</span><br><span class="line">print(sys.getsizeof(f))  # 相比生成式生成器不占用存储数据的空间 120</span><br><span class="line">for val in f:</span><br><span class="line">    print(val)</span><br></pre></td></tr></table></figure>
 <h2 id="5-tuple"><a href="#5-tuple" class="headerlink" title="5 tuple"></a>5 tuple</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">The tuple is &quot;const&quot;,it&apos;s almost the same as list.</span><br><span class="line"># initialization</span><br><span class="line">t = (&apos;ww&apos;, 38, True, &apos;从重重&apos;)</span><br><span class="line">print(t)</span><br><span class="line"># show the tuple</span><br><span class="line">print(t[0])</span><br><span class="line">print(t[3])</span><br><span class="line"># travelsal the value in tuple</span><br><span class="line">for member in t:</span><br><span class="line">    print(member)</span><br><span class="line"># re-assignment to tuple</span><br><span class="line"># t[0] = &apos;王大锤&apos;  # TypeError</span><br><span class="line"># delete the old tuple and create a new one </span><br><span class="line">t = (&apos;王大锤&apos;, 20, True, &apos;云南昆明&apos;)</span><br><span class="line">print(t)</span><br><span class="line"># change tuple into list</span><br><span class="line">person = list(t)</span><br><span class="line">print(person)</span><br><span class="line"># we can change the element in list</span><br><span class="line">person[0] = &apos;李小龙&apos;</span><br><span class="line">person[1] = 25</span><br><span class="line">print(person)</span><br><span class="line"># change list into tuple </span><br><span class="line">fruits_list = [&apos;apple&apos;, &apos;banana&apos;, &apos;orange&apos;]</span><br><span class="line">fruits_tuple = tuple(fruits_list)</span><br><span class="line">print(fruits_tuple)</span><br><span class="line"></span><br><span class="line">这里有一个非常值得探讨的问题，我们已经有了列表这种数据结构，为什 </span><br><span class="line">么还需要元组这样的类型呢？</span><br><span class="line"></span><br><span class="line">1 元组中的元素是无法修改的，事实上我们在项目中尤其是多线程环境（后  </span><br><span class="line">面会讲到）中可能更喜欢使用的是那些不变对象（一方面因为对象状态不</span><br><span class="line">能修改，所以可以避免由此引起的不必要的程序错误，简单的说就是一个  </span><br><span class="line">不变的对象要比可变的对象更加容易维护；另一方面因为没有任何一个线 </span><br><span class="line">程能够修改不变对象的内部状态，一个不变对象自动就是线程安全的，这  </span><br><span class="line">样就可以省掉处理同步化的开销。一个不变对象可以方便的被共享访 </span><br><span class="line">问）。所以结论就是：如果不需要对元素进行添加、删除、修改的时候,  </span><br><span class="line">可以考虑使用元组，当然如果一个方法要返回多个值，使用元组也是不错的选择。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2 元组在创建时间和占用的空间上面都优于列表。</span><br></pre></td></tr></table></figure>
+
+<p>from:<a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md</a></p>
+
       
     </div>
 
@@ -611,6 +624,163 @@
   
   
 
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/python%20&%20class/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LX">
+      <meta itemprop="description" content="A student">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BEAN HOUSE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/22/python%20&%20class/" class="post-title-link" itemprop="url">python & class</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-10 17:39:37" itemprop="dateModified" datetime="2019-12-10T17:39:37+08:00">2019-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="what-is-Object-oriented"><a href="#what-is-Object-oriented" class="headerlink" title="what is Object-oriented?"></a>what is Object-oriented?</h2><ol>
+<li><p>process-oriented programming<br>advantages: fast, assembly-line-like<br>disadvantages: hard to maintain, reuse and expand<br>(the code is very long and independent, and hard to be modified)   </p>
+</li>
+<li><p>object-oriented programming<br>advantages: easy to maintain, reuse and expand<br>(the code is shorter and easier to read, and much more flexible)<br>disadvantages: slower, more complex  </p>
+</li>
+</ol>
+<p><img src="/2019/11/22/python%20&%20class/blogpy1.png" alt></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/Neural%20Network/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LX">
+      <meta itemprop="description" content="A student">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BEAN HOUSE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/22/Neural%20Network/" class="post-title-link" itemprop="url">AI Basics</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-09 16:00:13" itemprop="dateModified" datetime="2019-12-09T16:00:13+08:00">2019-12-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="What-is-the-relationship-between-machine-learning-artificial-intelligence-and-deep-learning"><a href="#What-is-the-relationship-between-machine-learning-artificial-intelligence-and-deep-learning" class="headerlink" title="What is the relationship between machine learning, artificial intelligence, and deep learning?"></a>What is the relationship between machine learning, artificial intelligence, and deep learning?</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
   </div>
 
   
@@ -658,7 +828,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -671,7 +841,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
