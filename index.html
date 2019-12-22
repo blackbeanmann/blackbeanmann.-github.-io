@@ -618,125 +618,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/python%20&%20class/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LX">
-      <meta itemprop="description" content="A student">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BEAN HOUSE">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/22/python%20&%20class/" class="post-title-link" itemprop="url">python & class</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-14 21:50:21" itemprop="dateModified" datetime="2019-12-14T21:50:21+08:00">2019-12-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="what-is-Object-oriented"><a href="#what-is-Object-oriented" class="headerlink" title="what is Object-oriented?"></a>what is Object-oriented?</h2><ol>
-<li><p>process-oriented programming<br>advantages: fast, assembly-line-like<br>disadvantages: hard to maintain, reuse and expand<br>(the code is very long and independent, and hard to be modified)   </p>
-</li>
-<li><p>object-oriented programming<br>advantages: easy to maintain, reuse and expand<br>(the code is shorter and easier to read, and much more flexible)<br>disadvantages: slower, more complex,huge class library  </p>
-</li>
-</ol>
-<p><img src="/2019/11/22/python%20&%20class/blogpy1.png" alt></p>
-<h2 id="basics"><a href="#basics" class="headerlink" title="basics"></a>basics</h2><ol>
-<li>data + method = object  </li>
-<li>‘similar’ objects = class</li>
-<li>we can use encapsulation(封装) in class to hide the details</li>
-<li>we can use inheritance(继承) to specialize or generalize</li>
-<li>we can imply dynamic dispatch based on object type by using polymorphism</li>
-<li>class is the blueprint of object, while object is the instance of class </li>
-</ol>
-<h2 id="“private”-in-python"><a href="#“private”-in-python" class="headerlink" title="“private” in python"></a>“private” in python</h2><p>If you want to define a “private” member, you can define it as __name.<br>Actually, it is not “private”, we can access by analysing its name.<br>__name-&gt;private, _name-&gt;protected  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Test:</span><br><span class="line"></span><br><span class="line">    def __init__(self, foo): #constuctor</span><br><span class="line">        self.__foo = foo</span><br><span class="line">#we can analogy self to *this in C</span><br><span class="line">    def __bar(self):</span><br><span class="line">        print(self.__foo)</span><br><span class="line">        print(&apos;__bar&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    test = Test(&apos;hello&apos;)</span><br><span class="line">    test._Test__bar()</span><br><span class="line">    print(test._Test__foo)</span><br><span class="line"># we can access the __foo in this way</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<h2 id="getter-and-setter"><a href="#getter-and-setter" class="headerlink" title="getter and setter"></a>getter and setter</h2><p>If we use instance.property(属性，财产等), the name of our private members would be exposed, and others can access it.To avoid it, the getter and setter method are necessary.<br>And we can check the input here.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line"></span><br><span class="line">    def get_score(self):</span><br><span class="line">         return self._score</span><br><span class="line"></span><br><span class="line">    def set_score(self, value):</span><br><span class="line">        if not isinstance(value, int):	#judge the type of instance</span><br><span class="line">            raise ValueError(&apos;score must be an integer!&apos;)</span><br><span class="line">        if value &lt; 0 or value &gt; 100:</span><br><span class="line">            raise ValueError(&apos;score must between 0 ~ 100!&apos;)</span><br><span class="line">        self._score = value</span><br><span class="line"></span><br><span class="line">if __name__ == :&quot;__main__&quot;:</span><br><span class="line">	s = Student()</span><br><span class="line">	s.set_score(60)</span><br><span class="line">	s.get_score()</span><br></pre></td></tr></table></figure>
-
-<p>To simplify, the built-in decorator @property(属性，性能，财产) is the best choice.<br>It can change a method to a property.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def birth(self):</span><br><span class="line">        return self._birth</span><br><span class="line"></span><br><span class="line">    @birth.setter		#r, ifndef it, it is an read-only property</span><br><span class="line">    def birth(self, value):</span><br><span class="line">        self._birth = value</span><br><span class="line"></span><br><span class="line">    @property				</span><br><span class="line">    def age(self):</span><br><span class="line">        return 2015 - self._birth</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	s = Student()</span><br><span class="line">	s.score=60</span><br><span class="line">	print(s.score)</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="super"><a href="#super" class="headerlink" title="super()"></a>super()</h2><p><a href="https://www.runoob.com/python/python-func-super.html" target="_blank" rel="noopener">https://www.runoob.com/python/python-func-super.html</a></p>
-<h2 id="instance-method-amp-classmethod-amp-staticmethod"><a href="#instance-method-amp-classmethod-amp-staticmethod" class="headerlink" title="instance method &amp; classmethod &amp; staticmethod"></a>instance method &amp; classmethod &amp; staticmethod</h2><p>instance method<br>This is the general method to call function in a class.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class A:</span><br><span class="line">    def foo(self, x):</span><br><span class="line">        print(&quot;running foo(%s, %s)&quot; % (self, x))</span><br><span class="line"></span><br><span class="line"># we need an instance to call the function</span><br><span class="line">a = A()</span><br><span class="line">a.foo(&quot;test&quot;)</span><br></pre></td></tr></table></figure>
-
-<p>classmethod<br>If we don’t need interaction with instance, we can call<br>function with the name of class. The class method passing a whole class.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class A:</span><br><span class="line">    class_attr = &quot;attr&quot;</span><br><span class="line">    </span><br><span class="line">    def __init__(self):</span><br><span class="line">        pass</span><br><span class="line">        </span><br><span class="line">    @classmethod</span><br><span class="line">    def class_foo(cls):</span><br><span class="line">        print(&quot;running class_foo(%s)&quot; % (cls.class_attr))</span><br><span class="line"></span><br><span class="line">a = A()</span><br><span class="line">a.class_foo()</span><br><span class="line">A.class_foo()</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">static method  </span><br><span class="line">It is sth like static in c++,similar to instance  </span><br><span class="line">method, and free of the self parameter.</span><br></pre></td></tr></table></figure>
-<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="-- coding:utf-8 --"></a>-<em>- coding:utf-8 -</em>-</h1><p>log_enabled = True</p>
-<p>class A:<br>    class_attr = “attr”</p>
-<pre><code>def __init__(self):
-    pass
-
-@staticmethod
-def static_foo():
-    if log_enabled:
-        print(&quot;log is enabled&quot;)
-    else:
-        print(&quot;log is disabled&quot;)</code></pre><p>A.static_foo()</p>
-<p>```</p>
-<p>thx:<a href="https://www.cnblogs.com/zhangmingyan/p/11424562.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhangmingyan/p/11424562.html</a><br>thx:<a href="https://www.cnblogs.com/miqi1992/p/8343234.html" target="_blank" rel="noopener">https://www.cnblogs.com/miqi1992/p/8343234.html</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -806,6 +687,84 @@ def static_foo():
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/TCP:IP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LX">
+      <meta itemprop="description" content="A student">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BEAN HOUSE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/22/TCP:IP/" class="post-title-link" itemprop="url">TCP/IP</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-17 16:15:23" itemprop="dateModified" datetime="2019-12-17T16:15:23+08:00">2019-12-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="what-is-tcp-ip"><a href="#what-is-tcp-ip" class="headerlink" title="what is tcp/ip"></a>what is tcp/ip</h2><p>TCP/IP(Transmission Control Protocol / Internet Protocol) is a computer<br>communication protocol for internet.</p>
+<p>The TCP/IP relationship is similar to sending someone a message written on a puzzle through the mail. The message is written down and the puzzle is broken into pieces. Each piece then can travel through a different postal route, some of which take longer than others. When the puzzle pieces arrive after traversing their different paths, the pieces may be out of order. The Internet Protocol makes sure the pieces arrive at their destination address. The TCP protocol can be thought of as the puzzle assembler on the other side who puts the pieces together in the right order, asks for missing pieces to be resent, and lets the sender know the puzzle has been received. TCP maintains the connection with the sender from before the first puzzle piece is sent to after the final piece is sent.</p>
+<h2 id="3-handshakes"><a href="#3-handshakes" class="headerlink" title="3 handshakes"></a>3 handshakes</h2><p>For example, when an email is sent over TCP, a connection is established and a 3-way handshake is made. First, the source send an SYN “initial request” packet to the target server in order to start the dialogue. Then the target server then sends a SYN-ACK packet to agree to the process. Lastly, the source sends an ACK packet to the target to confirm the process, after which the message contents can be sent. The email message is ultimately broken down into packets before each packet is sent out into the Internet, where it traverses a series of gateways before arriving at the target device where the group of packets are reassembled by TCP into the original contents of the email.</p>
 
       
     </div>
@@ -924,7 +883,7 @@ def static_foo():
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/python%20&%20regular%20expression/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/python%20&%20class/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -938,7 +897,7 @@ def static_foo():
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/11/22/python%20&%20regular%20expression/" class="post-title-link" itemprop="url">python & regular expression</a>
+            <a href="/2019/11/22/python%20&%20class/" class="post-title-link" itemprop="url">python & class</a>
         </h1>
 
         <div class="post-meta">
@@ -955,7 +914,7 @@ def static_foo():
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-22 14:08:42" itemprop="dateModified" datetime="2019-12-22T14:08:42+08:00">2019-12-22</time>
+                <time title="Modified: 2019-12-14 21:50:21" itemprop="dateModified" datetime="2019-12-14T21:50:21+08:00">2019-12-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -980,19 +939,51 @@ def static_foo():
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="some-details…"><a href="#some-details…" class="headerlink" title="some details…"></a>some details…</h2><p><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/12.字符串和正则表达式.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/12.字符串和正则表达式.md</a></p>
-<p>the book automate the boring stuff with python</p>
-<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><p>1  sth about findall, it would match in ‘chunks’</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">phoneRegex = re.compile(r&apos;\d\d\d&apos;)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;sadadajdadn556666dfdifo&apos;)</span><br><span class="line">print(mo)#[&apos;556&apos;, &apos;666&apos;] # not 556 566 666 666</span><br></pre></td></tr></table></figure>
+          <h2 id="what-is-Object-oriented"><a href="#what-is-Object-oriented" class="headerlink" title="what is Object-oriented?"></a>what is Object-oriented?</h2><ol>
+<li><p>process-oriented programming<br>advantages: fast, assembly-line-like<br>disadvantages: hard to maintain, reuse and expand<br>(the code is very long and independent, and hard to be modified)   </p>
+</li>
+<li><p>object-oriented programming<br>advantages: easy to maintain, reuse and expand<br>(the code is shorter and easier to read, and much more flexible)<br>disadvantages: slower, more complex,huge class library  </p>
+</li>
+</ol>
+<p><img src="/2019/11/22/python%20&%20class/blogpy1.png" alt></p>
+<h2 id="basics"><a href="#basics" class="headerlink" title="basics"></a>basics</h2><ol>
+<li>data + method = object  </li>
+<li>‘similar’ objects = class</li>
+<li>we can use encapsulation(封装) in class to hide the details</li>
+<li>we can use inheritance(继承) to specialize or generalize</li>
+<li>we can imply dynamic dispatch based on object type by using polymorphism</li>
+<li>class is the blueprint of object, while object is the instance of class </li>
+</ol>
+<h2 id="“private”-in-python"><a href="#“private”-in-python" class="headerlink" title="“private” in python"></a>“private” in python</h2><p>If you want to define a “private” member, you can define it as __name.<br>Actually, it is not “private”, we can access by analysing its name.<br>__name-&gt;private, _name-&gt;protected  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Test:</span><br><span class="line"></span><br><span class="line">    def __init__(self, foo): #constuctor</span><br><span class="line">        self.__foo = foo</span><br><span class="line">#we can analogy self to *this in C</span><br><span class="line">    def __bar(self):</span><br><span class="line">        print(self.__foo)</span><br><span class="line">        print(&apos;__bar&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    test = Test(&apos;hello&apos;)</span><br><span class="line">    test._Test__bar()</span><br><span class="line">    print(test._Test__foo)</span><br><span class="line"># we can access the __foo in this way</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 
-<p>2  use () to slice a part</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">phoneRegex = re.compile(r&apos;(\d\d)\d&apos;)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;sadadajdadn123456dfdifo&apos;)</span><br><span class="line">print(mo)#[&apos;12&apos;, &apos;45&apos;]</span><br></pre></td></tr></table></figure>
+<h2 id="getter-and-setter"><a href="#getter-and-setter" class="headerlink" title="getter and setter"></a>getter and setter</h2><p>If we use instance.property(属性，财产等), the name of our private members would be exposed, and others can access it.To avoid it, the getter and setter method are necessary.<br>And we can check the input here.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line"></span><br><span class="line">    def get_score(self):</span><br><span class="line">         return self._score</span><br><span class="line"></span><br><span class="line">    def set_score(self, value):</span><br><span class="line">        if not isinstance(value, int):	#judge the type of instance</span><br><span class="line">            raise ValueError(&apos;score must be an integer!&apos;)</span><br><span class="line">        if value &lt; 0 or value &gt; 100:</span><br><span class="line">            raise ValueError(&apos;score must between 0 ~ 100!&apos;)</span><br><span class="line">        self._score = value</span><br><span class="line"></span><br><span class="line">if __name__ == :&quot;__main__&quot;:</span><br><span class="line">	s = Student()</span><br><span class="line">	s.set_score(60)</span><br><span class="line">	s.get_score()</span><br></pre></td></tr></table></figure>
 
-<p>3.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">phoneRegex = re.compile(r&apos;&apos;&apos;(  #r means that we don&apos;t need extra /</span><br><span class="line">        ^https://pan.baidu.com/s/   #start with it</span><br><span class="line">        (.*)                        #match any</span><br><span class="line">        )&apos;&apos;&apos;, re.VERBOSE)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;https://pan.baidu.com/s/11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;)</span><br><span class="line">print(mo)</span><br><span class="line"></span><br><span class="line"># [(&apos;https://pan.baidu.com/s/11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;, &apos;11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;)]</span><br></pre></td></tr></table></figure>
+<p>To simplify, the built-in decorator @property(属性，性能，财产) is the best choice.<br>It can change a method to a property.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def birth(self):</span><br><span class="line">        return self._birth</span><br><span class="line"></span><br><span class="line">    @birth.setter		#r, ifndef it, it is an read-only property</span><br><span class="line">    def birth(self, value):</span><br><span class="line">        self._birth = value</span><br><span class="line"></span><br><span class="line">    @property				</span><br><span class="line">    def age(self):</span><br><span class="line">        return 2015 - self._birth</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	s = Student()</span><br><span class="line">	s.score=60</span><br><span class="line">	print(s.score)</span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">phoneRegex = re.compile(r&apos;&apos;&apos;  #r means that we don&apos;t need extra /</span><br><span class="line">        ^https://pan.baidu.com/s/   #start with it</span><br><span class="line">        (.*)                        #match any</span><br><span class="line">        &apos;&apos;&apos;, re.VERBOSE)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;https://pan.baidu.com/s/11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;)</span><br><span class="line">print(mo)</span><br></pre></td></tr></table></figure>
+<h2 id="super"><a href="#super" class="headerlink" title="super()"></a>super()</h2><p><a href="https://www.runoob.com/python/python-func-super.html" target="_blank" rel="noopener">https://www.runoob.com/python/python-func-super.html</a></p>
+<h2 id="instance-method-amp-classmethod-amp-staticmethod"><a href="#instance-method-amp-classmethod-amp-staticmethod" class="headerlink" title="instance method &amp; classmethod &amp; staticmethod"></a>instance method &amp; classmethod &amp; staticmethod</h2><p>instance method<br>This is the general method to call function in a class.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class A:</span><br><span class="line">    def foo(self, x):</span><br><span class="line">        print(&quot;running foo(%s, %s)&quot; % (self, x))</span><br><span class="line"></span><br><span class="line"># we need an instance to call the function</span><br><span class="line">a = A()</span><br><span class="line">a.foo(&quot;test&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>classmethod<br>If we don’t need interaction with instance, we can call<br>function with the name of class. The class method passing a whole class.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class A:</span><br><span class="line">    class_attr = &quot;attr&quot;</span><br><span class="line">    </span><br><span class="line">    def __init__(self):</span><br><span class="line">        pass</span><br><span class="line">        </span><br><span class="line">    @classmethod</span><br><span class="line">    def class_foo(cls):</span><br><span class="line">        print(&quot;running class_foo(%s)&quot; % (cls.class_attr))</span><br><span class="line"></span><br><span class="line">a = A()</span><br><span class="line">a.class_foo()</span><br><span class="line">A.class_foo()</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">static method  </span><br><span class="line">It is sth like static in c++,similar to instance  </span><br><span class="line">method, and free of the self parameter.</span><br></pre></td></tr></table></figure>
+<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="-- coding:utf-8 --"></a>-<em>- coding:utf-8 -</em>-</h1><p>log_enabled = True</p>
+<p>class A:<br>    class_attr = “attr”</p>
+<pre><code>def __init__(self):
+    pass
+
+@staticmethod
+def static_foo():
+    if log_enabled:
+        print(&quot;log is enabled&quot;)
+    else:
+        print(&quot;log is disabled&quot;)</code></pre><p>A.static_foo()</p>
+<p>```</p>
+<p>thx:<a href="https://www.cnblogs.com/zhangmingyan/p/11424562.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhangmingyan/p/11424562.html</a><br>thx:<a href="https://www.cnblogs.com/miqi1992/p/8343234.html" target="_blank" rel="noopener">https://www.cnblogs.com/miqi1992/p/8343234.html</a></p>
+
       
     </div>
 
