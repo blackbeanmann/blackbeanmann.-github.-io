@@ -376,6 +376,86 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%22set%20and%20dictionary%22/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LX">
+      <meta itemprop="description" content="A student">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BEAN HOUSE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/22/%22set%20and%20dictionary%22/" class="post-title-link" itemprop="url">set and dictionary</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-08 23:13:25" itemprop="dateModified" datetime="2019-12-08T23:13:25+08:00">2019-12-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">set1=&#123;6,3,4,2,7&#125;</span><br><span class="line">print(set1)</span><br><span class="line">print(len(set1))</span><br><span class="line">set2 = set(range(1, 10)) #use constructor</span><br><span class="line">set3 = set((1, 2, 3, 3, 2, 1))#use constuvtor</span><br><span class="line">print(set2,set3)</span><br><span class="line">set4 = &#123;num for num in range(1, 10) if num % 3 == 0 or num % 5 == 0&#125;</span><br><span class="line">print(set4)</span><br><span class="line">set1.add(4)</span><br><span class="line">set1.add(5)</span><br><span class="line">set1.add(5)     #no problem, clever python ! </span><br><span class="line">set2.update([11, 12])</span><br><span class="line">print(set2)</span><br><span class="line">set2.discard(5)</span><br><span class="line">print(set2)</span><br><span class="line">set2.discard(5)  #no problem</span><br><span class="line">print(set2)</span><br><span class="line">set2.pop()          #pop from head</span><br><span class="line">print(set2)</span><br><span class="line">print(&quot;.................................&quot;)</span><br><span class="line"></span><br><span class="line"># 集合的交集、并集、差集、对称差运算</span><br><span class="line">print(set1 &amp; set2)</span><br><span class="line"># print(set1.intersection(set2))</span><br><span class="line">print(set1 | set2)</span><br><span class="line"># print(set1.union(set2))</span><br><span class="line">print(set1 - set2)</span><br><span class="line"># print(set1.difference(set2))</span><br><span class="line">print(set1 ^ set2)#(subtravting)</span><br><span class="line"># print(set1.symmetric_difference(set2))</span><br><span class="line"># 判断子集和超集</span><br><span class="line">print(set2 &lt;= set1)</span><br><span class="line"># print(set2.issubset(set1))</span><br><span class="line">print(set3 &lt;= set1)</span><br><span class="line"># print(set3.issubset(set1))</span><br><span class="line">print(set1 &gt;= set2)</span><br><span class="line"># print(set1.issuperset(set2))</span><br><span class="line">print(set1 &gt;= set3)</span><br><span class="line"># print(set1.issuperset(set3))</span><br><span class="line">#print(&#123;1, 2&#125; &gt; &#123;1&#125;)  # True</span><br></pre></td></tr></table></figure>
+
+<h2 id="dictionary"><a href="#dictionary" class="headerlink" title="dictionary"></a>dictionary</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"># 创建字典的字面量语法</span><br><span class="line">scores = &#123;&apos;骆昊&apos;: 95, &apos;白元芳&apos;: 78, &apos;狄仁杰&apos;: 82&#125;</span><br><span class="line">print(scores)</span><br><span class="line"># 创建字典的构造器语法</span><br><span class="line">items1 = dict(one=1, two=2, three=3, four=4)</span><br><span class="line"># 通过zip函数将两个序列压成字典</span><br><span class="line">items2 = dict(zip([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;], &apos;123&apos;))</span><br><span class="line"># 创建字典的推导式语法</span><br><span class="line">items3 = &#123;num: num ** 2 for num in range(1, 10)&#125;</span><br><span class="line">print(items1, items2, items3)</span><br><span class="line"># 通过键可以获取字典中对应的值</span><br><span class="line">print(scores[&apos;骆昊&apos;])</span><br><span class="line">print(scores[&apos;狄仁杰&apos;])</span><br><span class="line"># 对字典中所有键值对进行遍历</span><br><span class="line">for key in scores:</span><br><span class="line">    print(f&apos;&#123;key&#125;: &#123;scores[key]&#125;&apos;)</span><br><span class="line"># 更新字典中的元素</span><br><span class="line">scores[&apos;白元芳&apos;] = 65</span><br><span class="line">scores[&apos;诸葛王朗&apos;] = 71  #python would add it  </span><br><span class="line">automatically</span><br><span class="line">scores.update(冷面=67, 方启鹤=85)</span><br><span class="line">print(scores)</span><br><span class="line">if &apos;武则天&apos; in scores:</span><br><span class="line">    print(scores[&apos;武则天&apos;])</span><br><span class="line">print(scores.get(&apos;武则天&apos;))</span><br><span class="line"># get方法也是通过键获取对应的值但是可以设置默认值</span><br><span class="line">print(scores.get(&apos;武则天&apos;, 60))</span><br><span class="line"># 删除字典中的元素</span><br><span class="line">print(scores.popitem())</span><br><span class="line">print(scores.popitem())</span><br><span class="line">print(scores.pop(&apos;骆昊&apos;, 100))</span><br><span class="line"># 清空字典</span><br><span class="line">scores.clear()</span><br><span class="line">print(scores)</span><br></pre></td></tr></table></figure>
+
+<p>from:<a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%22list%20in%20py%22/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -460,7 +540,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%22set%20and%20dictionary%22/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%22set%20and%20dictionary%22%E7%9A%84%E5%89%AF%E6%9C%AC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -474,7 +554,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/11/22/%22set%20and%20dictionary%22/" class="post-title-link" itemprop="url">set and dictionary</a>
+            <a href="/2019/11/22/%22set%20and%20dictionary%22%E7%9A%84%E5%89%AF%E6%9C%AC/" class="post-title-link" itemprop="url">大一计算机笔试复习</a>
         </h1>
 
         <div class="post-meta">
@@ -491,7 +571,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-08 23:13:25" itemprop="dateModified" datetime="2019-12-08T23:13:25+08:00">2019-12-08</time>
+                <time title="Modified: 2019-12-25 10:13:19" itemprop="dateModified" datetime="2019-12-25T10:13:19+08:00">2019-12-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -499,8 +579,8 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
             </span>
@@ -516,11 +596,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">set1=&#123;6,3,4,2,7&#125;</span><br><span class="line">print(set1)</span><br><span class="line">print(len(set1))</span><br><span class="line">set2 = set(range(1, 10)) #use constructor</span><br><span class="line">set3 = set((1, 2, 3, 3, 2, 1))#use constuvtor</span><br><span class="line">print(set2,set3)</span><br><span class="line">set4 = &#123;num for num in range(1, 10) if num % 3 == 0 or num % 5 == 0&#125;</span><br><span class="line">print(set4)</span><br><span class="line">set1.add(4)</span><br><span class="line">set1.add(5)</span><br><span class="line">set1.add(5)     #no problem, clever python ! </span><br><span class="line">set2.update([11, 12])</span><br><span class="line">print(set2)</span><br><span class="line">set2.discard(5)</span><br><span class="line">print(set2)</span><br><span class="line">set2.discard(5)  #no problem</span><br><span class="line">print(set2)</span><br><span class="line">set2.pop()          #pop from head</span><br><span class="line">print(set2)</span><br><span class="line">print(&quot;.................................&quot;)</span><br><span class="line"></span><br><span class="line"># 集合的交集、并集、差集、对称差运算</span><br><span class="line">print(set1 &amp; set2)</span><br><span class="line"># print(set1.intersection(set2))</span><br><span class="line">print(set1 | set2)</span><br><span class="line"># print(set1.union(set2))</span><br><span class="line">print(set1 - set2)</span><br><span class="line"># print(set1.difference(set2))</span><br><span class="line">print(set1 ^ set2)#(subtravting)</span><br><span class="line"># print(set1.symmetric_difference(set2))</span><br><span class="line"># 判断子集和超集</span><br><span class="line">print(set2 &lt;= set1)</span><br><span class="line"># print(set2.issubset(set1))</span><br><span class="line">print(set3 &lt;= set1)</span><br><span class="line"># print(set3.issubset(set1))</span><br><span class="line">print(set1 &gt;= set2)</span><br><span class="line"># print(set1.issuperset(set2))</span><br><span class="line">print(set1 &gt;= set3)</span><br><span class="line"># print(set1.issuperset(set3))</span><br><span class="line">#print(&#123;1, 2&#125; &gt; &#123;1&#125;)  # True</span><br></pre></td></tr></table></figure>
-
-<h2 id="dictionary"><a href="#dictionary" class="headerlink" title="dictionary"></a>dictionary</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"># 创建字典的字面量语法</span><br><span class="line">scores = &#123;&apos;骆昊&apos;: 95, &apos;白元芳&apos;: 78, &apos;狄仁杰&apos;: 82&#125;</span><br><span class="line">print(scores)</span><br><span class="line"># 创建字典的构造器语法</span><br><span class="line">items1 = dict(one=1, two=2, three=3, four=4)</span><br><span class="line"># 通过zip函数将两个序列压成字典</span><br><span class="line">items2 = dict(zip([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;], &apos;123&apos;))</span><br><span class="line"># 创建字典的推导式语法</span><br><span class="line">items3 = &#123;num: num ** 2 for num in range(1, 10)&#125;</span><br><span class="line">print(items1, items2, items3)</span><br><span class="line"># 通过键可以获取字典中对应的值</span><br><span class="line">print(scores[&apos;骆昊&apos;])</span><br><span class="line">print(scores[&apos;狄仁杰&apos;])</span><br><span class="line"># 对字典中所有键值对进行遍历</span><br><span class="line">for key in scores:</span><br><span class="line">    print(f&apos;&#123;key&#125;: &#123;scores[key]&#125;&apos;)</span><br><span class="line"># 更新字典中的元素</span><br><span class="line">scores[&apos;白元芳&apos;] = 65</span><br><span class="line">scores[&apos;诸葛王朗&apos;] = 71  #python would add it  </span><br><span class="line">automatically</span><br><span class="line">scores.update(冷面=67, 方启鹤=85)</span><br><span class="line">print(scores)</span><br><span class="line">if &apos;武则天&apos; in scores:</span><br><span class="line">    print(scores[&apos;武则天&apos;])</span><br><span class="line">print(scores.get(&apos;武则天&apos;))</span><br><span class="line"># get方法也是通过键获取对应的值但是可以设置默认值</span><br><span class="line">print(scores.get(&apos;武则天&apos;, 60))</span><br><span class="line"># 删除字典中的元素</span><br><span class="line">print(scores.popitem())</span><br><span class="line">print(scores.popitem())</span><br><span class="line">print(scores.pop(&apos;骆昊&apos;, 100))</span><br><span class="line"># 清空字典</span><br><span class="line">scores.clear()</span><br><span class="line">print(scores)</span><br></pre></td></tr></table></figure>
-
-<p>from:<a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.字符串和常用数据结构.md</a></p>
+          <h1 id="数值、逻辑表达式与运算符"><a href="#数值、逻辑表达式与运算符" class="headerlink" title="数值、逻辑表达式与运算符"></a>数值、逻辑表达式与运算符</h1><h2 id="优先级与结合性"><a href="#优先级与结合性" class="headerlink" title="优先级与结合性"></a>优先级与结合性</h2><ol>
+<li><ul>
+<li>/ % 优先于 + -</li>
+</ul>
+</li>
+<li><ul>
+<li>/ 都是从左到右结合的，就是说先算左边的</li>
+</ul>
+</li>
+</ol>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><ol>
+<li>将一种类型的值赋给另一种时，表达式包含不同类型，函数传递参数时会进行类型转换</li>
+<li>乘除法只要有一个是浮点，默认结果是浮点</li>
+<li>短转长没啥子问题，长变短就会截断</li>
+<li>P64蓝字</li>
+</ol>
+<h2 id="坑坑子"><a href="#坑坑子" class="headerlink" title="坑坑子"></a>坑坑子</h2><ol>
+<li>#define是纯粹的宏替换，相当于直接抄过去，很多坑</li>
+<li>用浮点数时，注意eps，不能单纯的==；且1.0+3.0不一定等于4.0</li>
+</ol>
 
       
     </div>
@@ -784,105 +879,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/py%20decorators/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LX">
-      <meta itemprop="description" content="A student">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BEAN HOUSE">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/22/py%20decorators/" class="post-title-link" itemprop="url">decorators in python</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-13 08:48:27" itemprop="dateModified" datetime="2019-12-13T08:48:27+08:00">2019-12-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="What-is-decorator-in-py"><a href="#What-is-decorator-in-py" class="headerlink" title="What is decorator in py?"></a>What is decorator in py?</h2><p>Decorator can modify the function of function in order to simplify the code,<br>which means we can reuse our code wisely.<br>Essentially(本质上), the decorator is a function or a class, it can add sth to function or class<br>without modify the code(just add sth), and it returns a function or a class.</p>
-<p>Decorator is often used in scenarios(情景，脚本) with aspect needs.(切面需求  AOP 意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术)<br>for example, Insert log, performance test, transaction processing(事务处理), caching(缓存) and permission check.</p>
-<p>let’s learn some preliminary knowledge.</p>
-<h2 id="everything-in-python-can-be-an-object"><a href="#everything-in-python-can-be-an-object" class="headerlink" title="everything in python can be an object  "></a>everything in python can be an object  </h2><p>for example, we can use a function as an object.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">def hi(name=&quot;yasoob&quot;):</span><br><span class="line">    return &quot;hi &quot; + name</span><br><span class="line"> </span><br><span class="line">print(hi())</span><br><span class="line"># output: &apos;hi yasoob&apos;</span><br><span class="line"> </span><br><span class="line"># we can even assign a function to a variable</span><br><span class="line">greet = hi</span><br><span class="line"># we don&apos;t use the (), because we don&apos;t want to call functions</span><br><span class="line"># but we put it in a varieble &apos;greet&apos;</span><br><span class="line"> </span><br><span class="line">print(greet())</span><br><span class="line"># output: &apos;hi yasoob&apos;</span><br><span class="line"> </span><br><span class="line"># what would happen if we delete the function &apos;hi&apos;?</span><br><span class="line">del hi</span><br><span class="line">print(hi())</span><br><span class="line">#outputs: NameError</span><br><span class="line"> </span><br><span class="line">print(greet())</span><br><span class="line">#outputs: &apos;hi yasoob&apos;</span><br></pre></td></tr></table></figure>
-
-<h2 id="define-and-return-a-function-in-a-function"><a href="#define-and-return-a-function-in-a-function" class="headerlink" title="define and return a function in a function"></a>define and return a function in a function</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">def hi(name=&quot;yasoob&quot;):</span><br><span class="line">    def greet():</span><br><span class="line">        return &quot;now you are in the greet() function&quot;</span><br><span class="line"> </span><br><span class="line">    def welcome():</span><br><span class="line">        return &quot;now you are in the welcome() function&quot;</span><br><span class="line"> </span><br><span class="line">    if name == &quot;yasoob&quot;:</span><br><span class="line">        return greet</span><br><span class="line">    else:</span><br><span class="line">        return welcome</span><br><span class="line"> </span><br><span class="line">a = hi()</span><br><span class="line">print(a)</span><br><span class="line">#outputs: &lt;function greet at 0x7f2143c01500&gt;</span><br><span class="line"> </span><br><span class="line">#a-&gt;&amp;greet()</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">print(a())</span><br><span class="line">#outputs: now you are in the greet() function  #a()-&gt;run the function</span><br><span class="line">print(hi()())</span><br><span class="line">#outputs: now you are in the greet() function  #?????</span><br></pre></td></tr></table></figure>
-
-<p>So, we can use function without the “()” as a parameter</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def hi():</span><br><span class="line">    return &quot;hi yasoob!&quot;</span><br><span class="line"> </span><br><span class="line">def doSomethingBeforeHi(func):			#transfer the address of the func</span><br><span class="line">    print(&quot;I am doing some boring work before executing hi()&quot;)</span><br><span class="line">    print(func())</span><br><span class="line">	 # remember that if we don&apos;t use print(), we can&apos;t get the returned on screen</span><br><span class="line">doSomethingBeforeHi(hi)</span><br><span class="line">#outputs:I am doing some boring work before executing hi()</span><br><span class="line">#        hi yasoob!</span><br></pre></td></tr></table></figure>
-
-<h2 id="how-can-we-understand-the-process-of-a-decorator"><a href="#how-can-we-understand-the-process-of-a-decorator" class="headerlink" title="how can we understand the process of a decorator"></a>how can we understand the process of a decorator</h2><p>actually, it is something like this:  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def use_logging(func):</span><br><span class="line"></span><br><span class="line">    def wrapper():		</span><br><span class="line">        logging.warn(&quot;%s is running&quot; % func.__name__)</span><br><span class="line">        return func()   </span><br><span class="line">    return wrapper</span><br><span class="line">#Functions&apos; entrance and exit is an &quot;aspect&quot;.(AOP)</span><br><span class="line">def foo():</span><br><span class="line">    print(&apos;i am foo&apos;)</span><br><span class="line"></span><br><span class="line">foo = use_logging(foo)  # As we returned the func wrapper，it is equal to foo = wrapper(a foo have decorated)</span><br><span class="line">foo()                   # run the decorated foo()</span><br></pre></td></tr></table></figure>
-
-<p>And we have the @ syntactic sugar(语法糖), by using it, we can omit the last step to assign again.  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def use_logging(func):</span><br><span class="line"></span><br><span class="line">    def wrapper():</span><br><span class="line">        logging.warn(&quot;%s is running&quot; % func.__name__)</span><br><span class="line">        return func()</span><br><span class="line">    return wrapper</span><br><span class="line"></span><br><span class="line">@use_logging			#use the @ syntactic sugar before the head of a function</span><br><span class="line">def foo():</span><br><span class="line">    print(&quot;i am foo&quot;)</span><br><span class="line"></span><br><span class="line">foo()					#foo = use_logging(foo) (we have used @ to simplify)</span><br></pre></td></tr></table></figure>
-<p>Now we can add sth to the function without modify it, we can reuse the function.</p>
-<h2 id="args、-kwargs"><a href="#args、-kwargs" class="headerlink" title="*args、**kwargs"></a>*args、**kwargs</h2><h2 id="decorator-with-parameters"><a href="#decorator-with-parameters" class="headerlink" title="decorator with parameters"></a>decorator with parameters</h2><h2 id="decorator-in-class"><a href="#decorator-in-class" class="headerlink" title="decorator in class"></a>decorator in class</h2><p>Decorators in class have the advantages of great flexibility, high cohesion, and encapsulation.<br>But there is a disadvantage that the meta information of the original function is gone.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Foo(object):</span><br><span class="line">    def __init__(self, func):</span><br><span class="line">        self._func = func</span><br><span class="line"></span><br><span class="line">    def __call__(self):		#method __call__ can call instance object as a function </span><br><span class="line">        print (&apos;class decorator runing&apos;)</span><br><span class="line">        self._func()</span><br><span class="line">        print (&apos;class decorator ending&apos;)</span><br><span class="line">@Foo</span><br><span class="line">def bar():</span><br><span class="line">    print (&apos;bar&apos;)</span><br><span class="line"></span><br><span class="line">bar()</span><br><span class="line"></span><br><span class="line">#class decorator runing</span><br><span class="line">#bar</span><br><span class="line">#class decorator ending</span><br></pre></td></tr></table></figure>
-
-<h2 id="the-order-of-decorator"><a href="#the-order-of-decorator" class="headerlink" title="the order of decorator"></a>the order of decorator</h2><p>We can define many decorator in a single function.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@a</span><br><span class="line">@b</span><br><span class="line">@c</span><br><span class="line">def f ():</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">#f = a(b(c(f)))</span><br></pre></td></tr></table></figure>
-
-<p>from: <a href="https://www.runoob.com/w3cnote/python-func-decorators.html" target="_blank" rel="noopener">https://www.runoob.com/w3cnote/python-func-decorators.html</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/python%20&%20class/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1002,7 +998,7 @@ def static_foo():
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/python%20&%20file/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/py%20decorators/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1016,7 +1012,7 @@ def static_foo():
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/11/22/python%20&%20file/" class="post-title-link" itemprop="url">file operator in python</a>
+            <a href="/2019/11/22/py%20decorators/" class="post-title-link" itemprop="url">decorators in python</a>
         </h1>
 
         <div class="post-meta">
@@ -1033,7 +1029,7 @@ def static_foo():
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-15 15:50:53" itemprop="dateModified" datetime="2019-12-15T15:50:53+08:00">2019-12-15</time>
+                <time title="Modified: 2019-12-13 08:48:27" itemprop="dateModified" datetime="2019-12-13T08:48:27+08:00">2019-12-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1058,28 +1054,30 @@ def static_foo():
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="read-file"><a href="#read-file" class="headerlink" title="read file"></a>read file</h2><p>To open a file, the file path is nacessary (Relative or absolute path).<br>And, we should set the encoding parameter the same as the file encoding.</p>
-<p>there is a example of a txt:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def main():</span><br><span class="line">    f = open(&apos;致橡树.txt&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;)</span><br><span class="line">    print(f.read())</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<p>but it is not robust, so we should add sth to avoid program crashes if there is an error.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">def main():</span><br><span class="line">    f = None</span><br><span class="line">    try:</span><br><span class="line">        f = open(&apos;致橡树.txt&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;)</span><br><span class="line">        print(f.read())</span><br><span class="line">    except FileNotFoundError:</span><br><span class="line">        print(&apos;无法打开指定的文件!&apos;)</span><br><span class="line">    except LookupError:</span><br><span class="line">        print(&apos;指定了未知的编码!&apos;)</span><br><span class="line">    except UnicodeDecodeError:</span><br><span class="line">        print(&apos;读取文件时解码错误!&apos;)</span><br><span class="line">    finally:</span><br><span class="line">        if f:</span><br><span class="line">            f.close()</span><br><span class="line"># 3 kinds of errors</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+          <h2 id="What-is-decorator-in-py"><a href="#What-is-decorator-in-py" class="headerlink" title="What is decorator in py?"></a>What is decorator in py?</h2><p>Decorator can modify the function of function in order to simplify the code,<br>which means we can reuse our code wisely.<br>Essentially(本质上), the decorator is a function or a class, it can add sth to function or class<br>without modify the code(just add sth), and it returns a function or a class.</p>
+<p>Decorator is often used in scenarios(情景，脚本) with aspect needs.(切面需求  AOP 意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术)<br>for example, Insert log, performance test, transaction processing(事务处理), caching(缓存) and permission check.</p>
+<p>let’s learn some preliminary knowledge.</p>
+<h2 id="everything-in-python-can-be-an-object"><a href="#everything-in-python-can-be-an-object" class="headerlink" title="everything in python can be an object  "></a>everything in python can be an object  </h2><p>for example, we can use a function as an object.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">def hi(name=&quot;yasoob&quot;):</span><br><span class="line">    return &quot;hi &quot; + name</span><br><span class="line"> </span><br><span class="line">print(hi())</span><br><span class="line"># output: &apos;hi yasoob&apos;</span><br><span class="line"> </span><br><span class="line"># we can even assign a function to a variable</span><br><span class="line">greet = hi</span><br><span class="line"># we don&apos;t use the (), because we don&apos;t want to call functions</span><br><span class="line"># but we put it in a varieble &apos;greet&apos;</span><br><span class="line"> </span><br><span class="line">print(greet())</span><br><span class="line"># output: &apos;hi yasoob&apos;</span><br><span class="line"> </span><br><span class="line"># what would happen if we delete the function &apos;hi&apos;?</span><br><span class="line">del hi</span><br><span class="line">print(hi())</span><br><span class="line">#outputs: NameError</span><br><span class="line"> </span><br><span class="line">print(greet())</span><br><span class="line">#outputs: &apos;hi yasoob&apos;</span><br></pre></td></tr></table></figure>
 
-<p>In Python, we can put the code with potential risk in<br>the “try” block, and set adequate “except” to capture<br>potential errors.  </p>
-<p>In this example, imply that there are three kind of<br>errors in file reading.At last we used the finally<br>block to close the file,to free up external resources<br>obtained in the program.We should notice that whether<br>the program is normal or abnormal, it will be executed.  </p>
-<p>If you don’t like to use the finally block, you can use<br>context(上下文) syntex.Just specify the context of the file object with the<br>with keyword and automatically release file resources when leaving the context. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def main():</span><br><span class="line">    try:</span><br><span class="line">        with open(&apos;filename.txt&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;) as f:</span><br><span class="line">            print(f.read())</span><br><span class="line">    except FileNotFoundError:</span><br><span class="line">        print(&apos;无法打开指定的文件!&apos;)</span><br><span class="line">    except LookupError:</span><br><span class="line">        print(&apos;指定了未知的编码!&apos;)</span><br><span class="line">    except UnicodeDecodeError:</span><br><span class="line">        print(&apos;读取文件时解码错误!&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h2 id="define-and-return-a-function-in-a-function"><a href="#define-and-return-a-function-in-a-function" class="headerlink" title="define and return a function in a function"></a>define and return a function in a function</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">def hi(name=&quot;yasoob&quot;):</span><br><span class="line">    def greet():</span><br><span class="line">        return &quot;now you are in the greet() function&quot;</span><br><span class="line"> </span><br><span class="line">    def welcome():</span><br><span class="line">        return &quot;now you are in the welcome() function&quot;</span><br><span class="line"> </span><br><span class="line">    if name == &quot;yasoob&quot;:</span><br><span class="line">        return greet</span><br><span class="line">    else:</span><br><span class="line">        return welcome</span><br><span class="line"> </span><br><span class="line">a = hi()</span><br><span class="line">print(a)</span><br><span class="line">#outputs: &lt;function greet at 0x7f2143c01500&gt;</span><br><span class="line"> </span><br><span class="line">#a-&gt;&amp;greet()</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">print(a())</span><br><span class="line">#outputs: now you are in the greet() function  #a()-&gt;run the function</span><br><span class="line">print(hi()())</span><br><span class="line">#outputs: now you are in the greet() function  #?????</span><br></pre></td></tr></table></figure>
 
-<p>Moreover, we can read the file in lines.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import time </span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    with open(&apos;666.txt&apos;,&apos;r&apos;) as f: #we should notice that encoding was not included</span><br><span class="line">        for i in f:</span><br><span class="line">            print(i,end=&apos;&apos;)</span><br><span class="line">            time.sleep(0.2)</span><br><span class="line">    print()</span><br><span class="line"></span><br><span class="line">    #we can read the file in a list too</span><br><span class="line">    with open(&apos;666.txt&apos;,&apos;r&apos;) as f:</span><br><span class="line">        lines = f.readlines()</span><br><span class="line">    print(lines) # print the list line</span><br><span class="line">            </span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<p>So, we can use function without the “()” as a parameter</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def hi():</span><br><span class="line">    return &quot;hi yasoob!&quot;</span><br><span class="line"> </span><br><span class="line">def doSomethingBeforeHi(func):			#transfer the address of the func</span><br><span class="line">    print(&quot;I am doing some boring work before executing hi()&quot;)</span><br><span class="line">    print(func())</span><br><span class="line">	 # remember that if we don&apos;t use print(), we can&apos;t get the returned on screen</span><br><span class="line">doSomethingBeforeHi(hi)</span><br><span class="line">#outputs:I am doing some boring work before executing hi()</span><br><span class="line">#        hi yasoob!</span><br></pre></td></tr></table></figure>
 
-<h2 id="write-file"><a href="#write-file" class="headerlink" title="write file"></a>write file</h2><p>It is easy, just change the ‘r’ into ‘w’.If you want to append write,<br>use ‘a’, and if the file does not exist, it will be created automatically.  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">from math import sqrt</span><br><span class="line"></span><br><span class="line">def is_prime(n):</span><br><span class="line">    &quot;&quot;&quot;判断素数的函数&quot;&quot;&quot;</span><br><span class="line">    assert n &gt; 0  #assert would return the error if we can&apos;t meet its condition</span><br><span class="line">    for factor in range(2, int(sqrt(n)) + 1):</span><br><span class="line">        if n % factor == 0:</span><br><span class="line">            return False</span><br><span class="line">    return True if n != 1 else False</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    filenames = (&apos;a.txt&apos;, &apos;b.txt&apos;, &apos;c.txt&apos;)</span><br><span class="line">    fs_list = []</span><br><span class="line">    try:</span><br><span class="line">        for filename in filenames:</span><br><span class="line">            fs_list.append(open(filename, &apos;w&apos;, encoding=&apos;utf-8&apos;))</span><br><span class="line">        for number in range(1, 10000):</span><br><span class="line">            if is_prime(number):</span><br><span class="line">                if number &lt; 100:</span><br><span class="line">                    fs_list[0].write(str(number) + &apos;\n&apos;)</span><br><span class="line">                elif number &lt; 1000:</span><br><span class="line">                    fs_list[1].write(str(number) + &apos;\n&apos;)</span><br><span class="line">                else:</span><br><span class="line">                    fs_list[2].write(str(number) + &apos;\n&apos;)</span><br><span class="line">    except IOError as ex:</span><br><span class="line">        print(ex)</span><br><span class="line">        print(&apos;写文件时发生错误!&apos;)</span><br><span class="line">    finally:</span><br><span class="line">        for fs in fs_list:</span><br><span class="line">            fs.close()</span><br><span class="line">    print(&apos;操作完成!&apos;)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h2 id="how-can-we-understand-the-process-of-a-decorator"><a href="#how-can-we-understand-the-process-of-a-decorator" class="headerlink" title="how can we understand the process of a decorator"></a>how can we understand the process of a decorator</h2><p>actually, it is something like this:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def use_logging(func):</span><br><span class="line"></span><br><span class="line">    def wrapper():		</span><br><span class="line">        logging.warn(&quot;%s is running&quot; % func.__name__)</span><br><span class="line">        return func()   </span><br><span class="line">    return wrapper</span><br><span class="line">#Functions&apos; entrance and exit is an &quot;aspect&quot;.(AOP)</span><br><span class="line">def foo():</span><br><span class="line">    print(&apos;i am foo&apos;)</span><br><span class="line"></span><br><span class="line">foo = use_logging(foo)  # As we returned the func wrapper，it is equal to foo = wrapper(a foo have decorated)</span><br><span class="line">foo()                   # run the decorated foo()</span><br></pre></td></tr></table></figure>
 
+<p>And we have the @ syntactic sugar(语法糖), by using it, we can omit the last step to assign again.  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def use_logging(func):</span><br><span class="line"></span><br><span class="line">    def wrapper():</span><br><span class="line">        logging.warn(&quot;%s is running&quot; % func.__name__)</span><br><span class="line">        return func()</span><br><span class="line">    return wrapper</span><br><span class="line"></span><br><span class="line">@use_logging			#use the @ syntactic sugar before the head of a function</span><br><span class="line">def foo():</span><br><span class="line">    print(&quot;i am foo&quot;)</span><br><span class="line"></span><br><span class="line">foo()					#foo = use_logging(foo) (we have used @ to simplify)</span><br></pre></td></tr></table></figure>
+<p>Now we can add sth to the function without modify it, we can reuse the function.</p>
+<h2 id="args、-kwargs"><a href="#args、-kwargs" class="headerlink" title="*args、**kwargs"></a>*args、**kwargs</h2><h2 id="decorator-with-parameters"><a href="#decorator-with-parameters" class="headerlink" title="decorator with parameters"></a>decorator with parameters</h2><h2 id="decorator-in-class"><a href="#decorator-in-class" class="headerlink" title="decorator in class"></a>decorator in class</h2><p>Decorators in class have the advantages of great flexibility, high cohesion, and encapsulation.<br>But there is a disadvantage that the meta information of the original function is gone.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Foo(object):</span><br><span class="line">    def __init__(self, func):</span><br><span class="line">        self._func = func</span><br><span class="line"></span><br><span class="line">    def __call__(self):		#method __call__ can call instance object as a function </span><br><span class="line">        print (&apos;class decorator runing&apos;)</span><br><span class="line">        self._func()</span><br><span class="line">        print (&apos;class decorator ending&apos;)</span><br><span class="line">@Foo</span><br><span class="line">def bar():</span><br><span class="line">    print (&apos;bar&apos;)</span><br><span class="line"></span><br><span class="line">bar()</span><br><span class="line"></span><br><span class="line">#class decorator runing</span><br><span class="line">#bar</span><br><span class="line">#class decorator ending</span><br></pre></td></tr></table></figure>
 
-<h2 id="read-and-write-a-binary-file"><a href="#read-and-write-a-binary-file" class="headerlink" title="read and write a binary file"></a>read and write a binary file</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">def main():</span><br><span class="line">    try:</span><br><span class="line">        with open(&apos;guido.jpg&apos;, &apos;rb&apos;) as fs1:</span><br><span class="line">            data = fs1.read()</span><br><span class="line">            print(type(data))  # &lt;class &apos;bytes&apos;&gt;</span><br><span class="line">            print(data)</span><br><span class="line">        with open(&apos;吉多.jpg&apos;, &apos;wb&apos;) as fs2:</span><br><span class="line">            fs2.write(data)	# make a duplicate one </span><br><span class="line">    except FileNotFoundError as e:</span><br><span class="line">        print(&apos;指定的文件无法打开.&apos;)</span><br><span class="line">    except IOError as e:</span><br><span class="line">        print(&apos;读写文件时出现错误.&apos;)</span><br><span class="line">    print(&apos;程序执行结束.&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h2 id="the-order-of-decorator"><a href="#the-order-of-decorator" class="headerlink" title="the order of decorator"></a>the order of decorator</h2><p>We can define many decorator in a single function.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@a</span><br><span class="line">@b</span><br><span class="line">@c</span><br><span class="line">def f ():</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">#f = a(b(c(f)))</span><br></pre></td></tr></table></figure>
 
-
-<h2 id="json-module"><a href="#json-module" class="headerlink" title="json module"></a>json module</h2><p>from: <a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md</a></p>
+<p>from: <a href="https://www.runoob.com/w3cnote/python-func-decorators.html" target="_blank" rel="noopener">https://www.runoob.com/w3cnote/python-func-decorators.html</a></p>
 
       
     </div>
@@ -1145,20 +1143,20 @@ def static_foo():
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
