@@ -301,6 +301,93 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/python%20&%20regular%20expression/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LX">
+      <meta itemprop="description" content="A student">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BEAN HOUSE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/22/python%20&%20regular%20expression/" class="post-title-link" itemprop="url">python & regular expression</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-22 14:08:42" itemprop="dateModified" datetime="2019-12-22T14:08:42+08:00">2019-12-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="some-details…"><a href="#some-details…" class="headerlink" title="some details…"></a>some details…</h2><p><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/12.字符串和正则表达式.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/12.字符串和正则表达式.md</a></p>
+<p>the book automate the boring stuff with python</p>
+<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><p>1  sth about findall, it would match in ‘chunks’</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">phoneRegex = re.compile(r&apos;\d\d\d&apos;)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;sadadajdadn556666dfdifo&apos;)</span><br><span class="line">print(mo)#[&apos;556&apos;, &apos;666&apos;] # not 556 566 666 666</span><br></pre></td></tr></table></figure>
+
+<p>2  use () to slice a part</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">phoneRegex = re.compile(r&apos;(\d\d)\d&apos;)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;sadadajdadn123456dfdifo&apos;)</span><br><span class="line">print(mo)#[&apos;12&apos;, &apos;45&apos;]</span><br></pre></td></tr></table></figure>
+
+<p>3.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">phoneRegex = re.compile(r&apos;&apos;&apos;(  #r means that we don&apos;t need extra /</span><br><span class="line">        ^https://pan.baidu.com/s/   #start with it</span><br><span class="line">        (.*)                        #match any</span><br><span class="line">        )&apos;&apos;&apos;, re.VERBOSE)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;https://pan.baidu.com/s/11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;)</span><br><span class="line">print(mo)</span><br><span class="line"></span><br><span class="line"># [(&apos;https://pan.baidu.com/s/11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;, &apos;11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;)]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">phoneRegex = re.compile(r&apos;&apos;&apos;  #r means that we don&apos;t need extra /</span><br><span class="line">        ^https://pan.baidu.com/s/   #start with it</span><br><span class="line">        (.*)                        #match any</span><br><span class="line">        &apos;&apos;&apos;, re.VERBOSE)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;https://pan.baidu.com/s/11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;)</span><br><span class="line">print(mo)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E5%86%99%E4%BD%9C%E7%A7%AF%E7%B4%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -372,93 +459,6 @@
 <li></li>
 </ol>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/python%20&%20regular%20expression/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LX">
-      <meta itemprop="description" content="A student">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BEAN HOUSE">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/22/python%20&%20regular%20expression/" class="post-title-link" itemprop="url">python & regular expression</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-22 14:08:42" itemprop="dateModified" datetime="2019-12-22T14:08:42+08:00">2019-12-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="some-details…"><a href="#some-details…" class="headerlink" title="some details…"></a>some details…</h2><p><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/12.字符串和正则表达式.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/12.字符串和正则表达式.md</a></p>
-<p>the book automate the boring stuff with python</p>
-<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><p>1  sth about findall, it would match in ‘chunks’</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">phoneRegex = re.compile(r&apos;\d\d\d&apos;)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;sadadajdadn556666dfdifo&apos;)</span><br><span class="line">print(mo)#[&apos;556&apos;, &apos;666&apos;] # not 556 566 666 666</span><br></pre></td></tr></table></figure>
-
-<p>2  use () to slice a part</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">phoneRegex = re.compile(r&apos;(\d\d)\d&apos;)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;sadadajdadn123456dfdifo&apos;)</span><br><span class="line">print(mo)#[&apos;12&apos;, &apos;45&apos;]</span><br></pre></td></tr></table></figure>
-
-<p>3.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">phoneRegex = re.compile(r&apos;&apos;&apos;(  #r means that we don&apos;t need extra /</span><br><span class="line">        ^https://pan.baidu.com/s/   #start with it</span><br><span class="line">        (.*)                        #match any</span><br><span class="line">        )&apos;&apos;&apos;, re.VERBOSE)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;https://pan.baidu.com/s/11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;)</span><br><span class="line">print(mo)</span><br><span class="line"></span><br><span class="line"># [(&apos;https://pan.baidu.com/s/11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;, &apos;11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;)]</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">phoneRegex = re.compile(r&apos;&apos;&apos;  #r means that we don&apos;t need extra /</span><br><span class="line">        ^https://pan.baidu.com/s/   #start with it</span><br><span class="line">        (.*)                        #match any</span><br><span class="line">        &apos;&apos;&apos;, re.VERBOSE)   #use re.VERBOSE to add comment（注释）</span><br><span class="line">mo=phoneRegex.findall(&apos;https://pan.baidu.com/s/11onObcEP10PLVHD9yKFT3A#list/path=%2F&apos;)</span><br><span class="line">print(mo)</span><br></pre></td></tr></table></figure>
       
     </div>
 
