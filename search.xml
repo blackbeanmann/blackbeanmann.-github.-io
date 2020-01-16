@@ -144,31 +144,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2019/11/22/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>others</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>decorators in python</title>
     <url>/2019/11/22/py%20decorators/</url>
     <content><![CDATA[<h2 id="What-is-decorator-in-py"><a href="#What-is-decorator-in-py" class="headerlink" title="What is decorator in py?"></a>What is decorator in py?</h2><p>Decorator can modify the function of function in order to simplify the code,<br>which means we can reuse our code wisely.<br>Essentially(本质上), the decorator is a function or a class, it can add sth to function or class<br>without modify the code(just add sth), and it returns a function or a class.</p>
@@ -202,6 +177,141 @@
       <tags>
         <tag>python</tag>
         <tag>ex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2019/11/22/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>others</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>some collocation</title>
+    <url>/2019/11/22/volcabulary/</url>
+    <content><![CDATA[<ol>
+<li><p>capricious 反复无常：一会这样一会那样<br>Someone who is capricious often changes their mind unexpectedly</p>
+</li>
+<li><p>arbitrary   不讲事实瞎搞的<br>If you describe an action, rule, or decision as arbitrary, you think that it is not based on any principle, plan, or system. It often seems unfair because of this.    </p>
+</li>
+<li><p>alternatively ：要不 或者</p>
+</li>
+<li><p>alternately ：           交替的</p>
+</li>
+<li><p>一端开口 tube  两端开口 pipe</p>
+</li>
+<li><p>predomiant侧重主要的,有优势的<br>dominant侧重支配(地位)的</p>
+</li>
+<li><p>fine powder     细碎的粉末</p>
+</li>
+<li><p>manifest        显然的，表明</p>
+</li>
+<li><p>state space    状态空间</p>
+</li>
+<li><p>[人类] adolescent<br>teenager<br>juvenile</p>
+</li>
+<li><p>influence     主要指潜移默化的影响，对人的影响</p>
+</li>
+<li><p>impact 有强大作用，通常表示不好的事情</p>
+</li>
+<li><p>effect  影响，效应，偏向于结果，effect=have an affect on</p>
+</li>
+<li><p>consequence: 多指随某一事件引起的，必然或自然的不良结果，不强调直接的因果关系，而侧重事件发展的逻辑关系。</p>
+</li>
+<li><p><a href="https://wenku.baidu.com/view/3ec3e053360cba1aa911da3c.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/3ec3e053360cba1aa911da3c.html</a></p>
+</li>
+<li></li>
+</ol>
+<h2 id="历史文化类"><a href="#历史文化类" class="headerlink" title="历史文化类"></a>历史文化类</h2><p>闪米特 雅利安 mesopotamia=两河流域=现在伊拉克附近</p>
+<ol>
+<li>graze             放牧</li>
+<li>artifact        工艺品</li>
+<li>civilized         农耕名族</li>
+<li>brute-like        游牧名族    brute 残忍的 无理性的 野兽的</li>
+<li>institution        制度</li>
+<li>indigenous 当地的 custom 习俗</li>
+<li>lead 铅 tin 锡</li>
+<li>pictograph    埃及的象形文字</li>
+<li>portray         描绘</li>
+<li>frontality        正面像</li>
+<li>cult &amp;&amp; rite    宗教，祭祀典礼   比ceremony精准    </li>
+<li>wheat        小麦</li>
+<li>cuneiform     楔形文字</li>
+<li>tracts and fields    田径</li>
+<li>Coloseum    斗兽场</li>
+<li>arena        竞技场</li>
+<li>gladiator        角斗士disdain epistle</li>
+<li>disdain        蔑视</li>
+<li>epistle        书信</li>
+<li>highway        公路，大路</li>
+<li>lime 石灰            cement 水泥</li>
+<li>sewer        下水道</li>
+<li>invasion-&gt;invade</li>
+<li>crop rotation    轮作</li>
+<li>husbandry    养殖</li>
+<li>monarchy    君主制</li>
+<li>feudal        封建制</li>
+<li>house of representative 众议院</li>
+<li>house of senate        参议院</li>
+<li>parliament    议会</li>
+<li>congress        国会（议会）</li>
+<li>capitalism    资本主义</li>
+<li>prosperous    flourish    繁荣</li>
+<li>legislation    立法</li>
+<li>limited government    小政府</li>
+</ol>
+<h2 id="天文学-气象学meteorology"><a href="#天文学-气象学meteorology" class="headerlink" title="天文学/气象学meteorology"></a>天文学/气象学meteorology</h2><ol>
+<li>astronomer 天文学家 </li>
+<li>cosmonaut 俄罗斯宇航员    astronomer 美国宇航员  taikongnaut 中国航天员</li>
+<li>astrology    观星学</li>
+<li>cosmology宇宙学</li>
+<li>nebula -&gt;nebulae 星云</li>
+<li>dwarf star        矮星</li>
+<li>constellation    星座    stella星</li>
+<li>zodiac        黄道十二宫</li>
+<li>galaxy        银河</li>
+<li>star 恒星 planet 行星 moon/satellite 卫星 </li>
+<li>meteor 流星 comet 彗星 planetoid 小行星</li>
+<li>Mercury 水星  Venus 金星 Earth 地球 Mars 火星 Jupiter 木星 Saturn 土星 Uranus 天王星 Neptune 海王星 Pluto 冥王星</li>
+<li>diameter        直径</li>
+<li>terrestrial plant     类地行星</li>
+<li>Jovian plant        类木行星</li>
+<li>molecule            分子，微粒</li>
+<li>orbit 轨道</li>
+<li>spin    旋转</li>
+<li>hail                冰雹</li>
+<li>convection        对流</li>
+<li>cold front         冷峰</li>
+<li>condense        凝结    con聚集 dense密度</li>
+<li>monsoon        季风</li>
+<li>mediterranean climate 地中海气候</li>
+<li>warm air mass     暖气团</li>
+<li>tropical strom 热带风暴-&gt;typhoon 台风太平洋 </li>
+</ol>
+]]></content>
+      <categories>
+        <category>eg</category>
+      </categories>
+      <tags>
+        <tag>eg</tag>
       </tags>
   </entry>
   <entry>
@@ -295,6 +405,83 @@ def static_foo():
       </tags>
   </entry>
   <entry>
+    <title>some collocation</title>
+    <url>/2019/11/22/%E5%86%99%E4%BD%9C%E7%A7%AF%E7%B4%AF/</url>
+    <content><![CDATA[<h2 id="collocation"><a href="#collocation" class="headerlink" title="collocation"></a>collocation</h2><ol>
+<li>like-minded people     志趣相投者</li>
+<li>a compelling example         令人信服的例子    compel  强迫</li>
+<li>miss out on                 错失</li>
+<li>a coveted goal             一个想要达成的目标  covet 垂涎，觊觎</li>
+<li>parrot what is written in books     照着书念</li>
+<li>honed skills                 磨练过的技巧</li>
+<li>share opinions            交流分享观点</li>
+<li>stimulating environment        有启发的环境.   stimulating 刺激的，促进</li>
+<li>mutual cooperation             相互合作  mutual 相互的，共同的</li>
+<li>capital investment            资本投资</li>
+<li>sheer volume                  数量巨大</li>
+<li>novel ways                    新的方法</li>
+<li>geographically dispersed         地理隔离</li>
+<li>collectively                    总的来说</li>
+<li>cope with                    应付，处理</li>
+<li>network with                     结交</li>
+<li>land job interviews</li>
+<li>inferior quality            低质量</li>
+<li>foremost                         最重要的</li>
+<li>fall apart                        崩溃</li>
+<li>make trade-offs                作出权衡和协调</li>
+<li>to reiterate                    重申一遍</li>
+<li>mutual trust        互信   mutual 互相的</li>
+<li>squander money    挥霍钱 squander oppotunity</li>
+<li>self control        自控力</li>
+<li>inferiority complex  自卑心理     complex 情结</li>
+<li>wealth management    理财（个人）</li>
+<li>a small sum of money  一小笔钱</li>
+<li>build a bond         建立纽带</li>
+<li>pocket money        零花钱</li>
+<li>myriad benefits        很多好处。</li>
+<li>forster/cultivate/enhance skill 培养技能</li>
+<li>deleterious impact    有害影响   deleterious 有毒的，有害的</li>
+<li>I strongly assert that.     我坚信（表的啊观点）</li>
+<li>from my perspective</li>
+<li>financial affairs          财务事务</li>
+<li>bad quanlity            质量差</li>
+<li>on a weekly basis    </li>
+<li>slightly exceeded        稍微超出</li>
+<li>liberate sb from         从中解脱</li>
+<li>ultimately非常书面，而且有一种终结版的味道。ultimate这个词可以理解为终结，最终，有绝对的意思在里面。eventually主要是指一件事情或人经过了很长的时间或者挫折，终于达成了的感觉。</li>
+<li>groundless                 没有根据</li>
+<li>A compelling example is </li>
+<li>A good case in point is </li>
+<li>at sb’s disposal(支配)</li>
+<li>be inclined（倾向于，倾斜） to do sth          倾向于做某事</li>
+<li>intergrate into the collective 合群</li>
+<li>boost one’s self-esteem      提高自尊心</li>
+<li>share the same interest in </li>
+<li>In comtemporary society.   当今社会</li>
+<li>necessary / indispensable 必不可少的</li>
+<li>more often than not 时不时</li>
+<li>pester 纠缠 sb to do sth</li>
+<li>win-win strategy</li>
+</ol>
+<h2 id="sentences"><a href="#sentences" class="headerlink" title="sentences"></a>sentences</h2><ol>
+<li><font color="#00ffff">Had I not developed</font> close relationships with my peers, <font color="#00ffff">I would </font>not be happy with my career today.</li>
+<li>The science of complexity calls this emergent behavior: The behavior of the whole is greater than the sum of its parts. </li>
+<li>Notwithstanding these differences, however, both of these structures are undeniably cells.</li>
+<li>At the same time, this process helps developers master the problem domain, enabling them to ask better questions that illuminate the dark corners of a system’s desired behavior.</li>
+<li>A complex system designed from scratch never works and cannot be patched up to make it work.</li>
+<li>What is important about the object model is that these elements are brought together in a synergistic way.</li>
+<li>As we look back on the relatively brief yet colorful history of software engineering, we cannot help but notice two sweeping trends:</li>
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>eg</category>
+      </categories>
+      <tags>
+        <tag>eg</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python &amp; regular expression</title>
     <url>/2019/11/22/python%20&amp;%20regular%20expression/</url>
     <content><![CDATA[<h2 id="some-details…"><a href="#some-details…" class="headerlink" title="some details…"></a>some details…</h2><p><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/12.字符串和正则表达式.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/12.字符串和正则表达式.md</a></p>
@@ -316,31 +503,6 @@ def static_foo():
       <tags>
         <tag>python</tag>
         <tag>regex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>some collocation</title>
-    <url>/2019/11/22/%E5%86%99%E4%BD%9C%E7%A7%AF%E7%B4%AF/</url>
-    <content><![CDATA[<h2 id="collocation"><a href="#collocation" class="headerlink" title="collocation"></a>collocation</h2><ol>
-<li>like-minded people     志趣相投者</li>
-<li>a compelling example         令人信服的例子    compel  强迫</li>
-<li>miss out on                 错失</li>
-<li>a coveted goal             一个想要达成的目标  covet 垂涎，觊觎</li>
-<li>parrot what is written in books     照着书念</li>
-<li>honed skills                 磨练过的技巧</li>
-<li>share opinions            交流分享观点</li>
-<li>stimulating environment        有启发的环境.   stimulating 刺激的，促进</li>
-</ol>
-<h2 id="sentences"><a href="#sentences" class="headerlink" title="sentences"></a>sentences</h2><ol>
-<li><font color="#00ffff">Had I not developed</font> close relationships with my peers, <font color="#00ffff">I would </font>not be happy with my career today.</li>
-<li></li>
-</ol>
-]]></content>
-      <categories>
-        <category>eg</category>
-      </categories>
-      <tags>
-        <tag>eg</tag>
       </tags>
   </entry>
 </search>

@@ -204,6 +204,125 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/python%20&%20class/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LX">
+      <meta itemprop="description" content="A student">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BEAN HOUSE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/22/python%20&%20class/" class="post-title-link" itemprop="url">python & class</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-14 21:50:21" itemprop="dateModified" datetime="2019-12-14T21:50:21+08:00">2019-12-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="what-is-Object-oriented"><a href="#what-is-Object-oriented" class="headerlink" title="what is Object-oriented?"></a>what is Object-oriented?</h2><ol>
+<li><p>process-oriented programming<br>advantages: fast, assembly-line-like<br>disadvantages: hard to maintain, reuse and expand<br>(the code is very long and independent, and hard to be modified)   </p>
+</li>
+<li><p>object-oriented programming<br>advantages: easy to maintain, reuse and expand<br>(the code is shorter and easier to read, and much more flexible)<br>disadvantages: slower, more complex,huge class library  </p>
+</li>
+</ol>
+<p><img src="/2019/11/22/python%20&%20class/blogpy1.png" alt></p>
+<h2 id="basics"><a href="#basics" class="headerlink" title="basics"></a>basics</h2><ol>
+<li>data + method = object  </li>
+<li>‘similar’ objects = class</li>
+<li>we can use encapsulation(封装) in class to hide the details</li>
+<li>we can use inheritance(继承) to specialize or generalize</li>
+<li>we can imply dynamic dispatch based on object type by using polymorphism</li>
+<li>class is the blueprint of object, while object is the instance of class </li>
+</ol>
+<h2 id="“private”-in-python"><a href="#“private”-in-python" class="headerlink" title="“private” in python"></a>“private” in python</h2><p>If you want to define a “private” member, you can define it as __name.<br>Actually, it is not “private”, we can access by analysing its name.<br>__name-&gt;private, _name-&gt;protected  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Test:</span><br><span class="line"></span><br><span class="line">    def __init__(self, foo): #constuctor</span><br><span class="line">        self.__foo = foo</span><br><span class="line">#we can analogy self to *this in C</span><br><span class="line">    def __bar(self):</span><br><span class="line">        print(self.__foo)</span><br><span class="line">        print(&apos;__bar&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    test = Test(&apos;hello&apos;)</span><br><span class="line">    test._Test__bar()</span><br><span class="line">    print(test._Test__foo)</span><br><span class="line"># we can access the __foo in this way</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<h2 id="getter-and-setter"><a href="#getter-and-setter" class="headerlink" title="getter and setter"></a>getter and setter</h2><p>If we use instance.property(属性，财产等), the name of our private members would be exposed, and others can access it.To avoid it, the getter and setter method are necessary.<br>And we can check the input here.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line"></span><br><span class="line">    def get_score(self):</span><br><span class="line">         return self._score</span><br><span class="line"></span><br><span class="line">    def set_score(self, value):</span><br><span class="line">        if not isinstance(value, int):	#judge the type of instance</span><br><span class="line">            raise ValueError(&apos;score must be an integer!&apos;)</span><br><span class="line">        if value &lt; 0 or value &gt; 100:</span><br><span class="line">            raise ValueError(&apos;score must between 0 ~ 100!&apos;)</span><br><span class="line">        self._score = value</span><br><span class="line"></span><br><span class="line">if __name__ == :&quot;__main__&quot;:</span><br><span class="line">	s = Student()</span><br><span class="line">	s.set_score(60)</span><br><span class="line">	s.get_score()</span><br></pre></td></tr></table></figure>
+
+<p>To simplify, the built-in decorator @property(属性，性能，财产) is the best choice.<br>It can change a method to a property.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def birth(self):</span><br><span class="line">        return self._birth</span><br><span class="line"></span><br><span class="line">    @birth.setter		#r, ifndef it, it is an read-only property</span><br><span class="line">    def birth(self, value):</span><br><span class="line">        self._birth = value</span><br><span class="line"></span><br><span class="line">    @property				</span><br><span class="line">    def age(self):</span><br><span class="line">        return 2015 - self._birth</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	s = Student()</span><br><span class="line">	s.score=60</span><br><span class="line">	print(s.score)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="super"><a href="#super" class="headerlink" title="super()"></a>super()</h2><p><a href="https://www.runoob.com/python/python-func-super.html" target="_blank" rel="noopener">https://www.runoob.com/python/python-func-super.html</a></p>
+<h2 id="instance-method-amp-classmethod-amp-staticmethod"><a href="#instance-method-amp-classmethod-amp-staticmethod" class="headerlink" title="instance method &amp; classmethod &amp; staticmethod"></a>instance method &amp; classmethod &amp; staticmethod</h2><p>instance method<br>This is the general method to call function in a class.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class A:</span><br><span class="line">    def foo(self, x):</span><br><span class="line">        print(&quot;running foo(%s, %s)&quot; % (self, x))</span><br><span class="line"></span><br><span class="line"># we need an instance to call the function</span><br><span class="line">a = A()</span><br><span class="line">a.foo(&quot;test&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>classmethod<br>If we don’t need interaction with instance, we can call<br>function with the name of class. The class method passing a whole class.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class A:</span><br><span class="line">    class_attr = &quot;attr&quot;</span><br><span class="line">    </span><br><span class="line">    def __init__(self):</span><br><span class="line">        pass</span><br><span class="line">        </span><br><span class="line">    @classmethod</span><br><span class="line">    def class_foo(cls):</span><br><span class="line">        print(&quot;running class_foo(%s)&quot; % (cls.class_attr))</span><br><span class="line"></span><br><span class="line">a = A()</span><br><span class="line">a.class_foo()</span><br><span class="line">A.class_foo()</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">static method  </span><br><span class="line">It is sth like static in c++,similar to instance  </span><br><span class="line">method, and free of the self parameter.</span><br></pre></td></tr></table></figure>
+<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="-- coding:utf-8 --"></a>-<em>- coding:utf-8 -</em>-</h1><p>log_enabled = True</p>
+<p>class A:<br>    class_attr = “attr”</p>
+<pre><code>def __init__(self):
+    pass
+
+@staticmethod
+def static_foo():
+    if log_enabled:
+        print(&quot;log is enabled&quot;)
+    else:
+        print(&quot;log is disabled&quot;)</code></pre><p>A.static_foo()</p>
+<p>```</p>
+<p>thx:<a href="https://www.cnblogs.com/zhangmingyan/p/11424562.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhangmingyan/p/11424562.html</a><br>thx:<a href="https://www.cnblogs.com/miqi1992/p/8343234.html" target="_blank" rel="noopener">https://www.cnblogs.com/miqi1992/p/8343234.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/python%20&%20file/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,6 +401,147 @@
 
 
 <h2 id="json-module"><a href="#json-module" class="headerlink" title="json module"></a>json module</h2><p>from: <a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E5%86%99%E4%BD%9C%E7%A7%AF%E7%B4%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LX">
+      <meta itemprop="description" content="A student">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BEAN HOUSE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/22/%E5%86%99%E4%BD%9C%E7%A7%AF%E7%B4%AF/" class="post-title-link" itemprop="url">some collocation</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-16 10:58:41" itemprop="dateModified" datetime="2020-01-16T10:58:41+08:00">2020-01-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/eg/" itemprop="url" rel="index">
+                    <span itemprop="name">eg</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="collocation"><a href="#collocation" class="headerlink" title="collocation"></a>collocation</h2><ol>
+<li>like-minded people     志趣相投者</li>
+<li>a compelling example         令人信服的例子    compel  强迫</li>
+<li>miss out on                 错失</li>
+<li>a coveted goal             一个想要达成的目标  covet 垂涎，觊觎</li>
+<li>parrot what is written in books     照着书念</li>
+<li>honed skills                 磨练过的技巧</li>
+<li>share opinions            交流分享观点</li>
+<li>stimulating environment        有启发的环境.   stimulating 刺激的，促进</li>
+<li>mutual cooperation             相互合作  mutual 相互的，共同的</li>
+<li>capital investment            资本投资</li>
+<li>sheer volume                  数量巨大</li>
+<li>novel ways                    新的方法</li>
+<li>geographically dispersed         地理隔离</li>
+<li>collectively                    总的来说</li>
+<li>cope with                    应付，处理</li>
+<li>network with                     结交</li>
+<li>land job interviews</li>
+<li>inferior quality            低质量</li>
+<li>foremost                         最重要的</li>
+<li>fall apart                        崩溃</li>
+<li>make trade-offs                作出权衡和协调</li>
+<li>to reiterate                    重申一遍</li>
+<li>mutual trust        互信   mutual 互相的</li>
+<li>squander money    挥霍钱 squander oppotunity</li>
+<li>self control        自控力</li>
+<li>inferiority complex  自卑心理     complex 情结</li>
+<li>wealth management    理财（个人）</li>
+<li>a small sum of money  一小笔钱</li>
+<li>build a bond         建立纽带</li>
+<li>pocket money        零花钱</li>
+<li>myriad benefits        很多好处。</li>
+<li>forster/cultivate/enhance skill 培养技能</li>
+<li>deleterious impact    有害影响   deleterious 有毒的，有害的</li>
+<li>I strongly assert that.     我坚信（表的啊观点）</li>
+<li>from my perspective</li>
+<li>financial affairs          财务事务</li>
+<li>bad quanlity            质量差</li>
+<li>on a weekly basis    </li>
+<li>slightly exceeded        稍微超出</li>
+<li>liberate sb from         从中解脱</li>
+<li>ultimately非常书面，而且有一种终结版的味道。ultimate这个词可以理解为终结，最终，有绝对的意思在里面。eventually主要是指一件事情或人经过了很长的时间或者挫折，终于达成了的感觉。</li>
+<li>groundless                 没有根据</li>
+<li>A compelling example is </li>
+<li>A good case in point is </li>
+<li>at sb’s disposal(支配)</li>
+<li>be inclined（倾向于，倾斜） to do sth          倾向于做某事</li>
+<li>intergrate into the collective 合群</li>
+<li>boost one’s self-esteem      提高自尊心</li>
+<li>share the same interest in </li>
+<li>In comtemporary society.   当今社会</li>
+<li>necessary / indispensable 必不可少的</li>
+<li>more often than not 时不时</li>
+<li>pester 纠缠 sb to do sth</li>
+<li>win-win strategy</li>
+</ol>
+<h2 id="sentences"><a href="#sentences" class="headerlink" title="sentences"></a>sentences</h2><ol>
+<li><font color="#00ffff">Had I not developed</font> close relationships with my peers, <font color="#00ffff">I would </font>not be happy with my career today.</li>
+<li>The science of complexity calls this emergent behavior: The behavior of the whole is greater than the sum of its parts. </li>
+<li>Notwithstanding these differences, however, both of these structures are undeniably cells.</li>
+<li>At the same time, this process helps developers master the problem domain, enabling them to ask better questions that illuminate the dark corners of a system’s desired behavior.</li>
+<li>A complex system designed from scratch never works and cannot be patched up to make it work.</li>
+<li>What is important about the object model is that these elements are brought together in a synergistic way.</li>
+<li>As we look back on the relatively brief yet colorful history of software engineering, we cannot help but notice two sweeping trends:</li>
+<li></li>
+</ol>
 
       
     </div>
@@ -384,95 +644,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/%E5%86%99%E4%BD%9C%E7%A7%AF%E7%B4%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LX">
-      <meta itemprop="description" content="A student">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BEAN HOUSE">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/22/%E5%86%99%E4%BD%9C%E7%A7%AF%E7%B4%AF/" class="post-title-link" itemprop="url">some collocation</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-22 08:41:45" itemprop="dateCreated datePublished" datetime="2019-11-22T08:41:45+08:00">2019-11-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-13 12:23:09" itemprop="dateModified" datetime="2020-01-13T12:23:09+08:00">2020-01-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/eg/" itemprop="url" rel="index">
-                    <span itemprop="name">eg</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="collocation"><a href="#collocation" class="headerlink" title="collocation"></a>collocation</h2><ol>
-<li>like-minded people     志趣相投者</li>
-<li>a compelling example         令人信服的例子    compel  强迫</li>
-<li>miss out on                 错失</li>
-<li>a coveted goal             一个想要达成的目标  covet 垂涎，觊觎</li>
-<li>parrot what is written in books     照着书念</li>
-<li>honed skills                 磨练过的技巧</li>
-<li>share opinions            交流分享观点</li>
-<li>stimulating environment        有启发的环境.   stimulating 刺激的，促进</li>
-</ol>
-<h2 id="sentences"><a href="#sentences" class="headerlink" title="sentences"></a>sentences</h2><ol>
-<li><font color="#00ffff">Had I not developed</font> close relationships with my peers, <font color="#00ffff">I would </font>not be happy with my career today.</li>
-<li></li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -523,7 +694,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
